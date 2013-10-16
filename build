@@ -1,0 +1,7 @@
+cd ~/Dotfiles2
+
+# Setup VIM
+cp ~/Dotfiles2/vimrc.dist ~/.vimrc
+
+# Install
+vim +BundleInstall +qall

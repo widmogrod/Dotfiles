@@ -1,0 +1,4 @@
+set runtimepath+=~/Dotfiles2/vim
+set runtimepath+=~/Dotfiles2/vim/vim-addons/vim-addon-manager
+set runtimepath+=~/Dotfiles2/vim/bundle/vundle/
+source ~/Dotfiles2/vimrc
