@@ -1,0 +1,12 @@
+{
+    "name": "root/php",
+    "authors": [
+        {
+            "name": "widmogrod",
+            "email": "widmogrod@gmail.com"
+        }
+    ],
+    "require": {
+        "techlivezheng/phpctags" : "dev-trunk"
+    }
+}
