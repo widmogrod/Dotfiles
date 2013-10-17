@@ -17,6 +17,9 @@ Bundle 'mhinz/vim-signify'
 Bundle 'myusuf3/numbers.vim'
 "Bundle 'ervandew/supertab'
 Bundle 'joonty/vim-taggatron'
+"Bundle 'Shougo/vimproc'
+"Bundle 'Shougo/unite.vim'
+"Bundle 'm2mdas/phpcomplete-extended'
 
 Bundle 'bling/vim-airline'
 Bundle 'terryma/vim-multiple-cursors'
@@ -51,6 +54,9 @@ set shiftwidth=4
 set shiftround
 " Set tabs to be equivalent to 4 spaces (fixes retab)
 set tabstop=4
+" Set line number
+set number
+
 
 " Appearance
 syntax enable
