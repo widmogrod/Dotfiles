@@ -15,22 +15,13 @@ Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mhinz/vim-signify'
 Bundle 'myusuf3/numbers.vim'
-"Bundle 'ervandew/supertab'
 Bundle 'joonty/vim-taggatron'
-"Bundle 'Shougo/vimproc'
-"Bundle 'Shougo/unite.vim'
-"Bundle 'm2mdas/phpcomplete-extended'
-
 Bundle 'bling/vim-airline'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'Raimondi/delimitMate'
+Bundle 'SirVer/ultisnips'
 Bundle 'Valloric/YouCompleteMe'
-
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
 Bundle 'joonty/vim-phpunitqf'
 
 " required!
@@ -39,7 +30,7 @@ filetype plugin indent on
 
 " General
 " Remove all unwanted whitespaces on save
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+"autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd BufWritePre * :%s/\r\+$//e " Windows newlines
 autocmd BufWritePre * :%s/\s\+$//e
 " Indent the next line similiar to current line
@@ -72,16 +63,46 @@ map { :bprevious<CR>
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 
+
 " syntastic
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 
+
+" YCM + UltiSnips
+" UltiSnips completion function that tries to expand a snippet. If there's no
+" snippet for expanding, it checks for completion window and if it's
+" shown, selects first element. If there's no completion window it tries to
+" jump to next placeholder. If there's no placeholder it just returns TAB key
+function! g:UltiSnips_Complete()
+    call UltiSnips_ExpandSnippet()
+    if g:ulti_expand_res == 0
+        if pumvisible()
+            return "\<C-n>"
+        else
+            call UltiSnips_JumpForwards()
+            if g:ulti_jump_forwards_res == 0
+               return "\<TAB>"
+            endif
+        endif
+    endif
+    return ""
+endfunction
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" Complete snipped when using YCM
+" autocmd BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+autocmd TermResponse * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+
+
 " NERDTree
 map <leader>p :NERDTreeToggle<CR>
-" Start NERDTree
-autocmd VimEnter * NERDTree
-" Go to previous (last accessed) window.
-autocmd VimEnter * wincmd p
+autocmd VimEnter * NERDTree    " Start NERDTree
+autocmd VimEnter * wincmd l    " Active right window
 
 
 
@@ -116,4 +137,3 @@ let g:tagcommands = {
 
 " vim-phpunitqf
 let g:phpunit_cmd = "vendor/bin/phpunit"
-
