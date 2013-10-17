@@ -78,8 +78,11 @@ let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 
 " NERDTree
 map <leader>p :NERDTreeToggle<CR>
-" Open a NERDTree automatically when vim starts up
-autocmd vimenter * if !argc() | NERDTree | endif
+" Start NERDTree
+autocmd VimEnter * NERDTree
+" Go to previous (last accessed) window.
+autocmd VimEnter * wincmd p
+
 
 
 " vim-multiple-cursors
@@ -89,15 +92,12 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
+
 " taglist
 " vertically split taglist window will appear on the left hand side
 let Tlist_Use_Right_Window = 1
 nnoremap <leader>i :TlistToggle<CR>
 
-"/vim-easytags
-"set tags=./tags;
-"let g:easytags_by_filetype = './tags'
-"let g:easytags_dynamic_files = 1
 
 " taggatron
 " let g:taggatron_verbose = 1
@@ -105,7 +105,7 @@ let g:tagcommands = {
 \    "php" : {
 \        "tagfile" : ".php.tags",
 \        "cmd"  : "ctags",
-\        "args" : "-R --tag-relative=yes --exclude=.git --regex-php='/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i' --regex-PHP='^namespace\s+([^;]*)/\1/c/'"
+\        "args" : "-R"
 \    },
 \    "javascript" : {
 \        "tagfile":".js.tags",
@@ -116,3 +116,4 @@ let g:tagcommands = {
 
 " vim-phpunitqf
 let g:phpunit_cmd = "vendor/bin/phpunit"
+
