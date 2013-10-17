@@ -3,7 +3,7 @@ filetype off                   " required!
 
 " Vundle - in case if VAM installation is not available
 " I you will modified this, then run: vim +BundleInstall +qall
-call vundle#rc("~/Dotfiles")
+call vundle#rc("~/Dotfiles/vim/bundle")
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
