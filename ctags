@@ -1,0 +1,8 @@
+# Basic options
+--recurse=yes
+--tag-relative=yes
+--exclude=.git
+
+# PHP
+--regex-php='/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i'
+--regex-php='/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i' --regex-PHP='^namespace\s+([^;]*)/\1/c/'
