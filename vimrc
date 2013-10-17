@@ -3,7 +3,7 @@ filetype off                   " required!
 
 " Vundle - in case if VAM installation is not available
 " I you will modified this, then run: vim +BundleInstall +qall
-call vundle#rc()
+call vundle#rc("~/Dotfiles")
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
@@ -11,7 +11,6 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'xolox/vim-misc'
-"Bundle 'xolox/vim-easytags'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mhinz/vim-signify'
@@ -23,14 +22,17 @@ Bundle 'bling/vim-airline'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'Raimondi/delimitMate'
+Bundle 'Valloric/YouCompleteMe'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
+Bundle 'joonty/vim-phpunitqf'
 
 " required!
 filetype plugin indent on
+
 
 " General
 " Remove all unwanted whitespaces on save
@@ -60,7 +62,6 @@ colorscheme solarized
 map } :bnext<CR>
 map { :bprevious<CR>
 " map <leader>. :CtrlPTag<CR>
-"map <C-[> :pop<CR>
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
@@ -93,9 +94,19 @@ nnoremap <leader>i :TlistToggle<CR>
 "let g:easytags_dynamic_files = 1
 
 " taggatron
+" let g:taggatron_verbose = 1
 let g:tagcommands = {
 \    "php" : {
 \        "tagfile" : ".php.tags",
-\        "args" : "-R"
+\        "cmd"  : "ctags",
+\        "args" : "-R --tag-relative=yes --exclude=.git --regex-php='/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i' --regex-PHP='^namespace\s+([^;]*)/\1/c/'"
+\    },
+\    "javascript" : {
+\        "tagfile":".js.tags",
+\        "cmd"  : "ctags",
+\        "args":"-R"
 \    }
 \}
+
+" vim-phpunitqf
+let g:phpunit_cmd = "vendor/bin/phpunit"

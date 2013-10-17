@@ -1,7 +1,8 @@
-cd ~/Dotfiles2
+cd ~/Dotfiles
 
 # Setup VIM
-cp ~/Dotfiles2/vimrc.dist ~/.vimrc
+cp ~/Dotfiles/vimrc.dist ~/.vimrc
+#cp ~/Dotfiles/ctags ~/.ctags
 
 # Install
 vim +BundleInstall +qall
