@@ -1,8 +1,15 @@
-# Basic options
+-h ".php"
 --recurse=yes
 --tag-relative=yes
 --exclude=.git
-
-# PHP
---regex-php='/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i'
---regex-php='/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i' --regex-PHP='^namespace\s+([^;]*)/\1/c/'
+--exclude=.svn
+--exclude="composer.phar"
+--totals=yes
+--languages=PHP
+--tag-relative=yes
+--php-kinds=cdfi
+--langmap=PHP:+.phtml .
+--regex-php='/abstract class ([^ ]*)/\1/c/'
+--regex-php='/interface ([^ ]*)/\1/c/'
+--regex-php='/(public |static |abstract |protected |private )+function ([^ (]*)/\2/f/'
+--regex-php='^namespace\s+([^;]*)/\1/c/'

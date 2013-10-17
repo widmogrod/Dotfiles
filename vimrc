@@ -11,6 +11,9 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'xolox/vim-misc'
+Bundle 'Shougo/vimproc'
+"Bundle 'Shougo/unite.vim'
+"Bundle 'm2mdas/phpcomplete-extended'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mhinz/vim-signify'
@@ -23,14 +26,18 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'SirVer/ultisnips'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'joonty/vim-phpunitqf'
+"Bundle 'techlivezheng/vim-plugin-tagbar-phpctags'
 
 " required!
 filetype plugin indent on
 
 
+let g:tagbar_phpctags_bin='~/Dotfiles/bin/phpctags'
+let g:tagbar_phpctags_memory_limit = '512M'
+
+
 " General
 " Remove all unwanted whitespaces on save
-"autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd BufWritePre * :%s/\r\+$//e " Windows newlines
 autocmd BufWritePre * :%s/\s\+$//e
 " Indent the next line similiar to current line
@@ -47,6 +54,35 @@ set shiftround
 set tabstop=4
 " Set line number
 set number
+" Set to auto read when a file is changed from the outside
+set autoread
+" Free the backspace and enable arrow keys and h l to move past the beginning
+" and end of lines
+set backspace=indent,eol,start
+set whichwrap+=<,>,h,l
+" Highlight search results
+set hlsearch
+" Show matching bracets when text indicator is over them
+set showmatch
+" Turn backup off
+set nobackup
+set nowb
+set noswapfile
+
+" Persistent undo
+if version >= 703
+    let ud=$HOME . "/.vimundo"
+
+    if !isdirectory(ud)
+        call mkdir(ud)
+        echo "Created undo directory: " . ud
+    endif
+
+    execute "set undodir=" . ud
+    set undofile
+endif
+
+set undolevels=1000
 
 
 " Appearance
@@ -103,9 +139,6 @@ autocmd TermResponse * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " 
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-" YCM
-let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
-
 
 " NERDTree
 map <leader>p :NERDTreeToggle<CR>
@@ -129,12 +162,12 @@ nnoremap <leader>i :TlistToggle<CR>
 
 
 " taggatron
-" let g:taggatron_verbose = 1
+let g:taggatron_verbose = 1
 let g:tagcommands = {
 \    "php" : {
 \        "tagfile" : ".php.tags",
-\        "cmd"  : "ctags",
-\        "args" : "-R"
+\        "cmd"  : "~/Dotfiles/bin/phpctags",
+\        "args" : "-R --fields=+afmikS --sort=yes --memory=512M"
 \    },
 \    "javascript" : {
 \        "tagfile":".js.tags",
@@ -145,3 +178,8 @@ let g:tagcommands = {
 
 " vim-phpunitqf
 let g:phpunit_cmd = "vendor/bin/phpunit"
+
+" phpcomplete.vim
+autocmd  FileType  php setlocal omnifunc=phpcomplete#CompletePHP
+let g:phpcomplete_complete_for_unknown_classes = 0
+let g:phpcomplete_parse_docblock_comments = 1
