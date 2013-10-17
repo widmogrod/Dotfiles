@@ -12,7 +12,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Townk/vim-autoclose'
 Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-easytags'
+"Bundle 'xolox/vim-easytags'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mhinz/vim-signify'
@@ -36,6 +36,12 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
+" Navigation
+map } :bnext<CR>
+map { :bprevious<CR>
+" map <leader>. :CtrlPTag<CR>
+map <C-[> :pop<CR>
+
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 
@@ -48,9 +54,6 @@ map <leader>p :NERDTreeToggle<CR>
 " Open a NERDTree automatically when vim starts up
 autocmd vimenter * if !argc() | NERDTree | endif
 
-" minibufexpl.vim
-map } :bnext<CR>
-map { :bprevious<CR>
 
 " vim-multiple-cursors
 " Default mapping
@@ -65,9 +68,9 @@ let Tlist_Use_Right_Window = 1
 nnoremap <leader>i :TlistToggle<CR>
 
 "/vim-easytags
-":set tags=./tags;
-":let g:easytags_by_filetype='./'
-:let g:easytags_dynamic_files = 2
+set tags=./tags;
+"let g:easytags_by_filetype = './tags'
+let g:easytags_dynamic_files = 1
 
 
 
