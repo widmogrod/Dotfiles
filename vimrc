@@ -13,7 +13,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'xolox/vim-misc'
 "Bundle 'Shougo/vimproc'
 "Bundle 'Shougo/unite.vim'
-"Bundle 'm2mdas/phpcomplete-extended'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mhinz/vim-signify'
@@ -21,12 +20,12 @@ Bundle 'myusuf3/numbers.vim'
 Bundle 'joonty/vim-taggatron'
 Bundle 'bling/vim-airline'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'vim-scripts/taglist.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'SirVer/ultisnips'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'joonty/vim-phpunitqf'
-"Bundle 'techlivezheng/vim-plugin-tagbar-phpctags'
+Bundle 'majutsushi/tagbar'
+Bundle 'techlivezheng/vim-plugin-tagbar-phpctags'
 
 " required!
 filetype plugin indent on
@@ -155,10 +154,8 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
 
-" taglist
-" vertically split taglist window will appear on the left hand side
-let Tlist_Use_Right_Window = 1
-nnoremap <leader>i :TlistToggle<CR>
+" Tagbar
+nnoremap <leader>i :TagbarToggle<CR>
 
 
 " taggatron
