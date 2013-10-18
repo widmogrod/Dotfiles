@@ -26,6 +26,8 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'joonty/vim-phpunitqf'
 Bundle 'majutsushi/tagbar'
 Bundle 'techlivezheng/vim-plugin-tagbar-phpctags'
+Bundle 'beberlei/vim-php-refactor'
+
 
 " required!
 filetype plugin indent on
@@ -181,3 +183,13 @@ let g:phpunit_cmd = "vendor/bin/phpunit"
 autocmd  FileType  php setlocal omnifunc=phpcomplete#CompletePHP
 let g:phpcomplete_complete_for_unknown_classes = 0
 let g:phpcomplete_parse_docblock_comments = 1
+
+" php-refactor
+let g:no_php_maps = 1
+vmap <leader>em :call ExtractMethod()<CR>
+nnoremap <leader>ev :call ExtractVariable()<CR>
+nnoremap <leader>ep :call ExtractClassProperty()<CR>
+nnoremap <leader>ei :call ExtractInterface()<CR>
+nnoremap <leader>rlv :call RenameLocalVariable()<CR>
+nnoremap <leader>rcv :call RenameClassVariable()<CR>
+nnoremap <leader>iaf :call ImplementAbstractFunctions()<CR>
