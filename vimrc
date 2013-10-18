@@ -167,7 +167,8 @@ let g:tagcommands = {
 \    "php" : {
 \        "tagfile" : ".php.tags",
 \        "cmd"  : "~/Dotfiles/bin/phpctags",
-\        "args" : "-R --fields=+afmikS --sort=yes --memory=512M"
+\        "args" : "-R --fields=+afmikS --sort=yes --memory=512M --exclude=vendor --exclude=build --exclude=library --exclude=.git --exclude=.svn",
+\        "filesappend" : "/src"
 \    },
 \    "javascript" : {
 \        "tagfile":".js.tags",
