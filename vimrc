@@ -11,7 +11,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'xolox/vim-misc'
-Bundle 'Shougo/vimproc'
+"Bundle 'Shougo/vimproc'
 "Bundle 'Shougo/unite.vim'
 "Bundle 'm2mdas/phpcomplete-extended'
 Bundle 'shawncplus/phpcomplete.vim'
@@ -162,7 +162,7 @@ nnoremap <leader>i :TlistToggle<CR>
 
 
 " taggatron
-let g:taggatron_verbose = 1
+"let g:taggatron_verbose = 1
 let g:tagcommands = {
 \    "php" : {
 \        "tagfile" : ".php.tags",
