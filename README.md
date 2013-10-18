@@ -3,6 +3,15 @@
 
 ```
 git clone git@github.com:widmogrod/Dotfiles.git && cd ~/Dotfiles && ./build
+``
 
-cd ~/Dotfiles && ./bash/vimproc.sh && ./bask/vim-install-ycm.sh && ./bash/install-composer.sh && ./bash/install-php-libs.sh
 ```
+cd ~/Dotfiles/bash && ./vimproc.sh && ./vim-install-ycm.sh && ./install-composer.sh && ./install-php-libs.sh
+```
+
+## Shortcuts
+
+kk - move line up
+jj - move line donw
+\/ - toggle inline comment
+\? - toggle block comment
