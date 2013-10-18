@@ -95,8 +95,8 @@ colorscheme solarized
 " Navigation
 map } :bnext<CR>
 map { :bprevious<CR>
-nmap jj :m+1<CR>
-nmap kk :m-2<CR>
+nmap mj :m+1<CR>
+nmap mk :m-2<CR>
 " map <leader>. :CtrlPTag<CR>
 
 " vim-airline

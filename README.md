@@ -11,7 +11,7 @@ cd ~/Dotfiles/bash && ./vimproc.sh && ./vim-install-ycm.sh && ./install-composer
 
 ## Shortcuts
 
-kk - move line up
-jj - move line donw
+mk - move line up
+mj - move line donw
 \/ - toggle inline comment
 \? - toggle block comment
