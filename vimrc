@@ -27,7 +27,7 @@ Bundle 'joonty/vim-phpunitqf'
 Bundle 'majutsushi/tagbar'
 Bundle 'techlivezheng/vim-plugin-tagbar-phpctags'
 Bundle 'beberlei/vim-php-refactor'
-
+Bundle 'tomtom/tcomment_vim'
 
 " required!
 filetype plugin indent on
@@ -95,6 +95,8 @@ colorscheme solarized
 " Navigation
 map } :bnext<CR>
 map { :bprevious<CR>
+nmap jj :m+1<CR>
+nmap kk :m-2<CR>
 " map <leader>. :CtrlPTag<CR>
 
 " vim-airline
@@ -193,3 +195,7 @@ nnoremap <leader>ei :call ExtractInterface()<CR>
 nnoremap <leader>rlv :call RenameLocalVariable()<CR>
 nnoremap <leader>rcv :call RenameClassVariable()<CR>
 nnoremap <leader>iaf :call ImplementAbstractFunctions()<CR>
+
+" tomtom/tcomment_vim"
+map <leader>/ :TComment<CR>
+map <leader>? :TCommentInline<CR>
