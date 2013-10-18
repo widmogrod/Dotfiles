@@ -6,7 +6,7 @@ filetype off                   " required!
 call vundle#rc("~/Dotfiles/vim/bundle")
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
@@ -28,6 +28,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'techlivezheng/vim-plugin-tagbar-phpctags'
 Bundle 'beberlei/vim-php-refactor'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'git://repo.or.cz/vcscommand'
 
 " required!
 filetype plugin indent on
