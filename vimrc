@@ -29,6 +29,7 @@ Bundle 'techlivezheng/vim-plugin-tagbar-phpctags'
 Bundle 'beberlei/vim-php-refactor'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'git://repo.or.cz/vcscommand'
+"Bundle 'gcmt/tag-surfer'
 
 " required!
 filetype plugin indent on
