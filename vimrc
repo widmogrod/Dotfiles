@@ -94,12 +94,14 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
+
 " Navigation
 map } :bnext<CR>
 map { :bprevious<CR>
 nmap mj :m+1<CR>
 nmap mk :m-2<CR>
 " map <leader>. :CtrlPTag<CR>
+
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
@@ -180,13 +182,16 @@ let g:tagcommands = {
 \    }
 \}
 
+
 " vim-phpunitqf
 let g:phpunit_cmd = "vendor/bin/phpunit"
+
 
 " phpcomplete.vim
 autocmd  FileType  php setlocal omnifunc=phpcomplete#CompletePHP
 let g:phpcomplete_complete_for_unknown_classes = 0
 let g:phpcomplete_parse_docblock_comments = 1
+
 
 " php-refactor
 let g:no_php_maps = 1
@@ -198,6 +203,12 @@ nnoremap <leader>rlv :call RenameLocalVariable()<CR>
 nnoremap <leader>rcv :call RenameClassVariable()<CR>
 nnoremap <leader>iaf :call ImplementAbstractFunctions()<CR>
 
+
 " tomtom/tcomment_vim"
 map <leader>/ :TComment<CR>
 map <leader>? :TCommentInline<CR>
+
+
+" NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let g:NERDTreeMapJumpParent='h'
