@@ -215,3 +215,8 @@ map <leader>? :TCommentInline<CR>
 
 " NERDTree
 let g:NERDTreeMapJumpParent='h'
+
+" Load additional project configuration
+if filereadable(".vim.custom")
+    so .vim.custom
+endif
