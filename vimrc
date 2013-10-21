@@ -45,6 +45,8 @@ let g:tagbar_phpctags_memory_limit = '512M'
 " Remove all unwanted whitespaces on save
 autocmd BufWritePre * :%s/\r\+$//e " Windows newlines
 autocmd BufWritePre * :%s/\s\+$//e
+" When set allow switch between buffers even when buffer have change
+set hidden
 " Indent the next line similiar to current line
 set autoindent
 " Use same indentation characters as current line
