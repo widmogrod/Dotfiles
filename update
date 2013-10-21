@@ -1,0 +1,2 @@
+vim +BundleInsall +qall
+vim +BundleClean +qall
