@@ -30,6 +30,8 @@ Bundle 'beberlei/vim-php-refactor'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'git://repo.or.cz/vcscommand'
 "Bundle 'gcmt/tag-surfer'
+Bundle 'jelera/vim-javascript-syntax'
+
 
 " required!
 filetype plugin indent on
