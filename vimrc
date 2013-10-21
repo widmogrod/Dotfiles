@@ -31,7 +31,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'git://repo.or.cz/vcscommand'
 "Bundle 'gcmt/tag-surfer'
 Bundle 'jelera/vim-javascript-syntax'
-
+Bundle 'tpope/vim-unimpaired'
 
 " required!
 filetype plugin indent on
