@@ -45,6 +45,8 @@ let g:tagbar_phpctags_memory_limit = '512M'
 " Remove all unwanted whitespaces on save
 autocmd BufWritePre * :%s/\r\+$//e " Windows newlines
 autocmd BufWritePre * :%s/\s\+$//e
+" Clipboad as default set to +
+set clipboard=unnamedplus
 " Higlight current line
 set cursorline
 " When set allow switch between buffers even when buffer have change
@@ -97,7 +99,9 @@ set undolevels=1000
 " Appearance
 syntax enable
 set background=dark
-let g:solarized_termcolors=256
+" Uncomment this line if you are using iTerm
+"let g:solarized_termcolors=256
+call togglebg#map("<F5>")
 colorscheme solarized
 
 
