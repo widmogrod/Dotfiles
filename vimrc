@@ -32,6 +32,7 @@ Bundle 'git://repo.or.cz/vcscommand'
 "Bundle 'gcmt/tag-surfer'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'vim-scripts/bufkill.vim'
 
 " required!
 filetype plugin indent on
@@ -99,7 +100,7 @@ set undolevels=1000
 " Appearance
 syntax enable
 set background=dark
-" Uncomment this line if you are using iTerm
+"Uncomment this line if you are using iTerm
 "let g:solarized_termcolors=256
 call togglebg#map("<F5>")
 colorscheme solarized
@@ -226,3 +227,7 @@ let g:NERDTreeMapJumpParent='h'
 if filereadable(".vim.custom")
     so .vim.custom
 endif
+
+" BufKill
+map <leader>q :bd<CR>
+map <leader>Q :bd!<CR>
