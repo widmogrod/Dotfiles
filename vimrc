@@ -30,9 +30,12 @@ Bundle 'beberlei/vim-php-refactor'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'git://repo.or.cz/vcscommand'
 "Bundle 'gcmt/tag-surfer'
-Bundle 'jelera/vim-javascript-syntax'
+"Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/bufkill.vim'
+Bundle 'arnaud-lb/vim-php-namespace'
+Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-surround'
 
 " required!
 filetype plugin indent on
@@ -231,3 +234,7 @@ endif
 " BufKill
 map <leader>q :bd<CR>
 map <leader>Q :bd!<CR>
+
+" vim-php-namespace
+inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u :call PhpInsertUse()<CR>
