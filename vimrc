@@ -22,7 +22,6 @@ Bundle 'bling/vim-airline'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'Raimondi/delimitMate'
 Bundle 'SirVer/ultisnips'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'joonty/vim-phpunitqf'
 Bundle 'majutsushi/tagbar'
 Bundle 'techlivezheng/vim-plugin-tagbar-phpctags'
@@ -36,6 +35,14 @@ Bundle 'vim-scripts/bufkill.vim'
 Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-surround'
+Bundle 'marijnh/tern_for_vim'
+
+" Load additional project configuration
+if v:version < 740
+    so ~/Dotfiles/vimrc73
+else
+    so ~/Dotfiles/vimrc74
+endif
 
 " required!
 filetype plugin indent on
@@ -125,34 +132,11 @@ let g:airline#extensions#tabline#enabled = 1
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 
-
-" YCM + UltiSnips
-" UltiSnips completion function that tries to expand a snippet. If there's no
-" snippet for expanding, it checks for completion window and if it's
-" shown, selects first element. If there's no completion window it tries to
-" jump to next placeholder. If there's no placeholder it just returns TAB key
-function! g:UltiSnips_Complete()
-    call UltiSnips_ExpandSnippet()
-    if g:ulti_expand_res == 0
-        if pumvisible()
-            return "\<C-n>"
-        else
-            call UltiSnips_JumpForwards()
-            if g:ulti_jump_forwards_res == 0
-               return "\<TAB>"
-            endif
-        endif
-    endif
-    return ""
-endfunction
-
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-" Complete snipped when using YCM
-autocmd TermResponse * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
