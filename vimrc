@@ -38,7 +38,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'marijnh/tern_for_vim'
 
 " Load additional project configuration
-if v:version < 740
+if v:version < 704
     so ~/Dotfiles/vimrc73
 else
     so ~/Dotfiles/vimrc74
