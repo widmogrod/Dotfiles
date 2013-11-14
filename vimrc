@@ -222,3 +222,6 @@ map <leader>Q :bd!<CR>
 " vim-php-namespace
 inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
 noremap <Leader>u :call PhpInsertUse()<CR>
+
+" tern
+autocmd FileType javascript map <Leader>d :TernDef<CR>
