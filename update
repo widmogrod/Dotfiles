@@ -1,1 +1,1 @@
-vim +BundleInstall +qall && vim +BundleClean +qall
+vim +BundleUpdate +qall && vim +BundleClean +qall
