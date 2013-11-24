@@ -6,7 +6,7 @@ filetype off                   " required!
 call vundle#rc("~/Dotfiles/vim/bundle")
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
-"Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
