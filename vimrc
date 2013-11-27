@@ -110,7 +110,7 @@ set undolevels=1000
 
 " Appearance
 syntax enable
-set background=light
+set background=dark
 "Uncomment this line if you are using iTerm
 " let g:solarized_termcolors=256
 call togglebg#map("<F5>")
