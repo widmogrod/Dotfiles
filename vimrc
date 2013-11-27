@@ -36,6 +36,7 @@ Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-surround'
 Bundle 'marijnh/tern_for_vim'
+Bundle 'mileszs/ack.vim'
 
 " Load additional project configuration
 if v:version < 704
@@ -109,9 +110,9 @@ set undolevels=1000
 
 " Appearance
 syntax enable
-set background=dark
+set background=light
 "Uncomment this line if you are using iTerm
-"let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
 call togglebg#map("<F5>")
 colorscheme solarized
 
@@ -170,7 +171,7 @@ let g:tagcommands = {
 \    "php" : {
 \        "tagfile" : ".php.tags",
 \        "cmd"  : "~/Dotfiles/bin/phpctags",
-\        "args" : "-R --fields=+afmikS --sort=yes --memory=512M --exclude=vendor --exclude=build --exclude=library --exclude=.git --exclude=.svn",
+\        "args" : "-R --fields=+lafmikS --sort=yes --memory=512M --exclude=vendor --exclude=build --exclude=library --exclude=.git --exclude=.svn",
 \        "filesappend" : "/src"
 \    },
 \    "javascript" : {
@@ -186,7 +187,7 @@ let g:phpunit_cmd = "vendor/bin/phpunit"
 
 
 " phpcomplete.vim
-autocmd  FileType  php setlocal omnifunc=phpcomplete#CompletePHP
+autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 let g:phpcomplete_complete_for_unknown_classes = 0
 let g:phpcomplete_parse_docblock_comments = 1
 
