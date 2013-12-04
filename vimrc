@@ -48,10 +48,9 @@ endif
 " required!
 filetype plugin indent on
 
-
+let mapleader=';'
 let g:tagbar_phpctags_bin='~/Dotfiles/bin/phpctags'
 let g:tagbar_phpctags_memory_limit = '512M'
-
 
 " General
 " Remove all unwanted whitespaces on save
@@ -91,6 +90,8 @@ set showmatch
 set nobackup
 set nowb
 set noswapfile
+" Escape when double leader
+imap <leader><leader> <ESC>
 
 " Persistent undo
 if version >= 703
