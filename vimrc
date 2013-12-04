@@ -5,6 +5,7 @@ filetype off                   " required!
 " I you will modified this, then run: vim +BundleInstall +qall
 call vundle#rc("~/Dotfiles/vim/bundle")
 Bundle 'gmarik/vundle'
+Bundle 'chilicuil/nextCS'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
@@ -111,11 +112,11 @@ set undolevels=1000
 
 " Appearance
 syntax enable
-set background=dark
+" set background=dark
 "Uncomment this line if you are using iTerm
 " let g:solarized_termcolors=256
-call togglebg#map("<F5>")
-colorscheme solarized
+" call togglebg#map("<F5>")
+" colorscheme solarized
 
 
 " Navigation
