@@ -28,7 +28,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'techlivezheng/vim-plugin-tagbar-phpctags'
 Bundle 'beberlei/vim-php-refactor'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'git://repo.or.cz/vcscommand'
+Bundle 'vim-scripts/vcscommand.vim'
 "Bundle 'gcmt/tag-surfer'
 "Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tpope/vim-unimpaired'
@@ -38,6 +38,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-surround'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'vim-scripts/VOoM'
 
 " Load additional project configuration
 if v:version < 704
@@ -140,6 +141,30 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+" YCM + UltiSnips
+" UltiSnips completion function that tries to expand a snippet. If there's no
+" snippet for expanding, it checks for completion window and if it's
+" shown, selects first element. If there's no completion window it tries to
+" jump to next placeholder. If there's no placeholder it just returns TAB key
+function! g:UltiSnips_Complete()
+    call UltiSnips_ExpandSnippet()
+    if g:ulti_expand_res == 0
+        if pumvisible()
+            return "\<C-n>"
+        else
+            call UltiSnips_JumpForwards()
+            if g:ulti_jump_forwards_res == 0
+               return "\<TAB>"
+            endif
+        endif
+    endif
+    return ""
+endfunction
+
+
+" Complete snipped when using YCM
+autocmd TermResponse * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+
 
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
@@ -164,7 +189,13 @@ let g:multi_cursor_quit_key='<Esc>'
 
 
 " Tagbar
-nnoremap <leader>i :TagbarToggle<CR>
+autocmd FileType php nnoremap <leader>i :TagbarToggle<CR>
+
+" Voom
+autocmd FileType rst nnoremap <leader>i :Voom rest<CR>
+autocmd FileType md nnoremap <leader>i :Voom markdown<CR>
+autocmd FileType markdown nnoremap <leader>i :Voom markdown<CR>
+autocmd FileType mdown nnoremap <leader>i :Voom markdown<CR>
 
 
 " taggatron
