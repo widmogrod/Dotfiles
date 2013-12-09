@@ -59,7 +59,7 @@ let g:tagbar_phpctags_memory_limit = '512M'
 autocmd BufWritePre * :%s/\r\+$//e " Windows newlines
 autocmd BufWritePre * :%s/\s\+$//e
 " Clipboad as default set to +
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 " Higlight current line
 set cursorline
 " When set allow switch between buffers even when buffer have change
