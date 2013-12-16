@@ -39,6 +39,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/VOoM'
+Bundle 'docteurklein/php-getter-setter.vim'
 
 " Load additional project configuration
 if v:version < 704
@@ -259,3 +260,8 @@ noremap <Leader>u :call PhpInsertUse()<CR>
 
 " tern
 autocmd FileType javascript map <Leader>d :TernDef<CR>
+
+" php-get-set
+map <leader>gg  :InsertGetterOnly<CR>
+map <leader>gs  :InsertSetterOnly<CR>
+map <leader>ggs :InsertBothGetterSetter<CR>
