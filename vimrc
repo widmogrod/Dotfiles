@@ -136,6 +136,7 @@ let g:airline#extensions#tabline#enabled = 1
 " syntastic
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_javascript_checkers=['jslint']
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
