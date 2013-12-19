@@ -177,8 +177,8 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " NERDTree
 map <leader>p :NERDTreeToggle<CR>
-autocmd VimEnter * NERDTree    " Start NERDTree
-autocmd VimEnter * wincmd l    " Active right window
+" autocmd VimEnter * NERDTree    " Start NERDTree
+" autocmd VimEnter * wincmd l    " Active right window
 
 
 
