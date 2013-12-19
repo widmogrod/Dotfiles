@@ -266,3 +266,6 @@ autocmd FileType javascript map <Leader>d :TernDef<CR>
 map <leader>gg  :InsertGetterOnly<CR>
 map <leader>gs  :InsertSetterOnly<CR>
 map <leader>ggs :InsertBothGetterSetter<CR>
+
+" tidy content
+autocmd Syntax xml nmap <leader>t :.,%!xmllint --format --recover -<CR>
