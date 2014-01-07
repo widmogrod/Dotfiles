@@ -44,6 +44,7 @@ Bundle 'itchyny/calendar.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'gregsexton/gitv'
 Bundle 'mattn/gist-vim'
+Bundle 'mhinz/vim-startify'
 
 " Load additional project configuration
 if v:version < 704
@@ -278,3 +279,6 @@ autocmd Syntax xml nmap <leader>t :.,%!xmllint --format --recover -<CR>
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 " let g:user_emmet_leader_key='<C-Z>'
+
+" startify
+let g:startify_custom_header=map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
