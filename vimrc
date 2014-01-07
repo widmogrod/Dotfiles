@@ -45,6 +45,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'gregsexton/gitv'
 Bundle 'mattn/gist-vim'
 Bundle 'mhinz/vim-startify'
+Bundle 'mbbill/undotree'
 
 " Load additional project configuration
 if v:version < 704
