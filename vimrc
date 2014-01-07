@@ -40,6 +40,7 @@ Bundle 'marijnh/tern_for_vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/VOoM'
 Bundle 'docteurklein/php-getter-setter.vim'
+Bundle 'itchyny/calendar.vim'
 
 " Load additional project configuration
 if v:version < 704
