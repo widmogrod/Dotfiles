@@ -41,6 +41,9 @@ Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/VOoM'
 Bundle 'docteurklein/php-getter-setter.vim'
 Bundle 'itchyny/calendar.vim'
+Bundle 'mattn/emmet-vim'
+Bundle 'gregsexton/gitv'
+Bundle 'mattn/gist-vim'
 
 " Load additional project configuration
 if v:version < 704
@@ -270,3 +273,8 @@ map <leader>ggs :InsertBothGetterSetter<CR>
 
 " tidy content
 autocmd Syntax xml nmap <leader>t :.,%!xmllint --format --recover -<CR>
+
+" emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+" let g:user_emmet_leader_key='<C-Z>'

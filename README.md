@@ -15,3 +15,8 @@ mk - move line up
 mj - move line donw
 \/ - toggle inline comment
 \? - toggle block comment
+
+cs"' - change braces
+cd'<p> - ....
+
+
