@@ -3,7 +3,7 @@
 
 ```
 git clone git@github.com:widmogrod/Dotfiles.git && cd ~/Dotfiles && ./build
-``
+```
 
 ```
 cd ~/Dotfiles/bash && ./vimproc.sh && ./vim-install-ycm.sh && ./install-composer.sh && ./install-php-libs.sh
@@ -13,7 +13,10 @@ cd ~/Dotfiles/bash && ./vimproc.sh && ./vim-install-ycm.sh && ./install-composer
 
 ### Usefull
 
+```
 <leader> = ;
+```
+
 ```
 mk - move line up
 mj - move line donw
@@ -32,6 +35,7 @@ cd'<p> - ....
 ```
 
 ### Context specific
+
 ```
 <leader>t - tidy document
 <leader>i - inspector
@@ -39,7 +43,9 @@ cd'<p> - ....
 
 ### JavaScript
 
+```
 <leader>d - go to definition
+```
 
 ### Html
 ```
