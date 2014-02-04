@@ -6,8 +6,14 @@ git clone git@github.com:widmogrod/Dotfiles.git && cd ~/Dotfiles && ./build
 ```
 
 ```
-cd ~/Dotfiles/bash && ./vimproc.sh && ./vim-install-ycm.sh && ./install-composer.sh && ./install-php-libs.sh
+cd ~/Dotfiles/bash && ./vimproc.sh && ./vim-install-ycm.sh && ./install-composer.sh && ./install-php-libs.sh && sudo ./install-gem.sh
 ```
+## Plugins
+### VimDeck
+To use this plugin you have to perform falowing steps:
+ * run `./install-gem.js`
+ * create presentation in markdown
+ * run `vimdeck my.md`
 
 ## Shortcuts
 

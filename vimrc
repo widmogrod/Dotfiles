@@ -6,7 +6,7 @@ filetype off                   " required!
 call vundle#rc("~/Dotfiles/vim/bundle")
 Bundle 'gmarik/vundle'
 Bundle 'chilicuil/nextCS'
-Bundle 'altercation/vim-colors-solarized'
+" Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
@@ -46,6 +46,11 @@ Bundle 'gregsexton/gitv'
 Bundle 'mattn/gist-vim'
 Bundle 'mhinz/vim-startify'
 Bundle 'mbbill/undotree'
+" Bundle 'dsawardekar/portkey'
+Bundle 'elzr/vim-json'
+Bundle 'tybenz/vimdeck'
+Bundle 'gregsexton/gitv'
+
 
 " Load additional project configuration
 if v:version < 704
