@@ -47,7 +47,7 @@ Bundle 'mattn/gist-vim'
 Bundle 'mhinz/vim-startify'
 Bundle 'mbbill/undotree'
 " Bundle 'dsawardekar/portkey'
-Bundle 'elzr/vim-json'
+" Bundle 'elzr/vim-json' - not usefull
 Bundle 'tybenz/vimdeck'
 Bundle 'gregsexton/gitv'
 
