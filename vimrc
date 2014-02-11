@@ -213,6 +213,7 @@ autocmd FileType mdown nnoremap <leader>i :Voom markdown<CR>
 
 " taggatron
 "let g:taggatron_verbose = 1
+let g:taggatron_enabled = 1
 let g:tagcommands = {
 \    "php" : {
 \        "tagfile" : ".php.tags",
