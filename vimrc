@@ -60,6 +60,7 @@ Bundle 'mhinz/vim-startify'
 Bundle 'mbbill/undotree'
 " With Wildfire you can quickly select the closest text object among a group of candidates
 Bundle 'gcmt/wildfire.vim'
+Bundle 'zenorocha/dracula-theme'
 
 " Load additional project configuration
 if v:version < 704
