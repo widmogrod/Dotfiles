@@ -58,6 +58,8 @@ Bundle 'mattn/gist-vim'
 Bundle 'mhinz/vim-startify'
 " :UndotreeToggle
 Bundle 'mbbill/undotree'
+" With Wildfire you can quickly select the closest text object among a group of candidates
+Bundle 'gcmt/wildfire.vim'
 
 " Load additional project configuration
 if v:version < 704
@@ -150,6 +152,8 @@ nmap mk :m-2<CR>
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
+" let g:airline_powerline_fonts = 1
+set laststatus=2
 
 
 " syntastic
