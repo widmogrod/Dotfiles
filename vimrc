@@ -141,6 +141,7 @@ syntax enable
 " let g:solarized_termcolors=256
 " call togglebg#map("<F5>")
 " colorscheme solarized
+colorscheme dracula
 
 
 " Navigation
