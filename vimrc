@@ -5,52 +5,59 @@ filetype off                   " required!
 " I you will modified this, then run: vim +BundleInstall +qall
 call vundle#rc("~/Dotfiles/vim/bundle")
 Bundle 'gmarik/vundle'
+" Change your vim color scheme easily F11 F12
 Bundle 'chilicuil/nextCS'
-" Bundle 'altercation/vim-colors-solarized'
+" May very well be the best Git wrapper
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'xolox/vim-misc'
-"Bundle 'Shougo/vimproc'
-"Bundle 'Shougo/unite.vim'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'kien/ctrlp.vim'
+" Show a VCS diff using Vim's sign column.
 Bundle 'mhinz/vim-signify'
+" A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
+Bundle 'airblade/vim-gitgutter'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'joonty/vim-taggatron'
 Bundle 'bling/vim-airline'
 Bundle 'terryma/vim-multiple-cursors'
+" Vim plugin, provides insert mode auto-completion for quotes, parens, brackets, etc.
 Bundle 'Raimondi/delimitMate'
 Bundle 'SirVer/ultisnips'
-Bundle 'joonty/vim-phpunitqf'
+" Bundle 'joonty/vim-phpunitqf'
 Bundle 'majutsushi/tagbar'
 Bundle 'techlivezheng/vim-plugin-tagbar-phpctags'
 Bundle 'beberlei/vim-php-refactor'
+" An extensible & universal comment vim-plugin that also handles embedded filetypes
 Bundle 'tomtom/tcomment_vim'
 Bundle 'vim-scripts/vcscommand.vim'
-"Bundle 'gcmt/tag-surfer'
-"Bundle 'jelera/vim-javascript-syntax'
+" Add keymapings for []
 Bundle 'tpope/vim-unimpaired'
+" Unload/delete/wipe a buffer, keep its window(s), display last accessed buffer(s)
 Bundle 'vim-scripts/bufkill.vim'
+" types 'use' statements for you
 Bundle 'arnaud-lb/vim-php-namespace'
+" Vastly improved Javascript indentation and syntax support in Vim.
 Bundle 'pangloss/vim-javascript'
+" Change \" -> ' by: cs\"'
 Bundle 'tpope/vim-surround'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'mileszs/ack.vim'
+" Vim Outliner of Markers <leader>i
 Bundle 'vim-scripts/VOoM'
 Bundle 'docteurklein/php-getter-setter.vim'
-Bundle 'itchyny/calendar.vim'
+" ZenCodding like <c-y>,
 Bundle 'mattn/emmet-vim'
+" Gitk for VIM :Gitv
 Bundle 'gregsexton/gitv'
+" Create gist from current buffer :Gist (anonymous :Gist -a)
 Bundle 'mattn/gist-vim'
+" A fancy start screen for Vim.
 Bundle 'mhinz/vim-startify'
+" :UndotreeToggle
 Bundle 'mbbill/undotree'
-" Bundle 'dsawardekar/portkey'
-" Bundle 'elzr/vim-json' - not usefull
-Bundle 'tybenz/vimdeck'
-Bundle 'gregsexton/gitv'
-
 
 " Load additional project configuration
 if v:version < 704
@@ -104,6 +111,7 @@ set showmatch
 set nobackup
 set nowb
 set noswapfile
+set paste
 " Escape when double leader
 imap <leader><leader> <ESC>
 
