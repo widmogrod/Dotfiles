@@ -222,14 +222,13 @@ autocmd FileType mdown nnoremap <leader>i :Voom markdown<CR>
 
 
 " taggatron
-"let g:taggatron_verbose = 1
+" let g:taggatron_verbose = 1
 let g:taggatron_enabled = 1
 let g:tagcommands = {
 \    "php" : {
 \        "tagfile" : ".php.tags",
 \        "cmd"  : "~/Dotfiles/bin/phpctags",
-\        "args" : "-R --fields=+lafmikS --sort=yes --memory=512M --exclude=vendor --exclude=build --exclude=library --exclude=.git --exclude=.svn",
-\        "filesappend" : "/src"
+\        "args" : "--recurse=yes --memory=-1 --fields=+tcmfpdvin --exclude=vendor"
 \    },
 \    "javascript" : {
 \        "tagfile":".js.tags",
@@ -302,4 +301,4 @@ let g:startify_custom_header=map(split(system('fortune | cowsay'), '\n'), '"   "
 
 " behat
 let g:feature_filetype='behat'
-let g:behat_executables = ['vendor/bin/behat']
+let g:behat_executables = ['./vendor/bin/behat']
