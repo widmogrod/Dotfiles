@@ -64,7 +64,7 @@ Bundle 'mbbill/undotree'
 Bundle 'gcmt/wildfire.vim'
 Bundle 'zenorocha/dracula-theme'
 " PHP
-" Bundle 'veloce/vim-behat'
+Bundle 'veloce/vim-behat'
 
 " Load additional project configuration
 if v:version < 704
@@ -299,3 +299,7 @@ autocmd FileType html,css EmmetInstall
 
 " startify
 let g:startify_custom_header=map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
+
+" behat
+let g:feature_filetype='behat'
+let g:behat_executables = ['vendor/bin/behat']
