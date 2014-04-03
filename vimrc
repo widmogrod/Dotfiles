@@ -120,6 +120,10 @@ set showmatch
 set nobackup
 set nowb
 set noswapfile
+"  Search before hit enter
+set incsearch
+" Show available commands in list
+set wildmenu
 " set paste cinflicts with YCM
 " set paste
 " Escape when double leader
