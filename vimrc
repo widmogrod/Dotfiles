@@ -88,6 +88,8 @@ set cursorline
 set hidden
 " Indent the next line similiar to current line
 set autoindent
+" Be smart with indent
+set smartindent
 " Use same indentation characters as current line
 set copyindent
 " Use spaces instead of tabs for indentation
@@ -142,7 +144,8 @@ syntax enable
 " call togglebg#map("<F5>")
 " colorscheme solarized
 colorscheme dracula
-
+" fix bacground color for dracula-theme
+hi Normal ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#282a36 gui=NONE
 
 " Navigation
 map } :bnext<CR>
@@ -174,12 +177,12 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " shown, selects first element. If there's no completion window it tries to
 " jump to next placeholder. If there's no placeholder it just returns TAB key
 function! g:UltiSnips_Complete()
-    call UltiSnips_ExpandSnippet()
+    call UltiSnips#ExpandSnippet()
     if g:ulti_expand_res == 0
         if pumvisible()
             return "\<C-n>"
         else
-            call UltiSnips_JumpForwards()
+            call UltiSnips#JumpForwards()
             if g:ulti_jump_forwards_res == 0
                return "\<TAB>"
             endif
@@ -190,7 +193,7 @@ endfunction
 
 
 " Complete snipped when using YCM
-autocmd TermResponse * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+autocmd TermResponse * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips#Complete()<cr>"
 
 
 " If you prefer the Omni-Completion tip window to close when a selection is
