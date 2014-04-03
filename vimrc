@@ -15,6 +15,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'xolox/vim-misc'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'ervandew/supertab'
 " Show a VCS diff using Vim's sign column.
 Bundle 'mhinz/vim-signify'
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
@@ -26,6 +27,7 @@ Bundle 'terryma/vim-multiple-cursors'
 " Vim plugin, provides insert mode auto-completion for quotes, parens, brackets, etc.
 Bundle 'Raimondi/delimitMate'
 Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 " Bundle 'joonty/vim-phpunitqf'
 Bundle 'majutsushi/tagbar'
 Bundle 'techlivezheng/vim-plugin-tagbar-phpctags'
@@ -61,6 +63,8 @@ Bundle 'mbbill/undotree'
 " With Wildfire you can quickly select the closest text object among a group of candidates
 Bundle 'gcmt/wildfire.vim'
 Bundle 'zenorocha/dracula-theme'
+" PHP
+" Bundle 'veloce/vim-behat'
 
 " Load additional project configuration
 if v:version < 704
@@ -116,7 +120,8 @@ set showmatch
 set nobackup
 set nowb
 set noswapfile
-set paste
+" set paste cinflicts with YCM
+" set paste
 " Escape when double leader
 imap <leader><leader> <ESC>
 
@@ -166,34 +171,18 @@ let g:syntastic_always_populate_loc_list=1
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 let g:syntastic_javascript_checkers=['jslint']
 
-" UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" YCM
+let g:ycm_use_ultisnips_completer = 1
+let g:ycm_key_list_select_completion = ['<tab>', '<down>', '<enter>']
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
 
-" YCM + UltiSnips
-" UltiSnips completion function that tries to expand a snippet. If there's no
-" snippet for expanding, it checks for completion window and if it's
-" shown, selects first element. If there's no completion window it tries to
-" jump to next placeholder. If there's no placeholder it just returns TAB key
-function! g:UltiSnips_Complete()
-    call UltiSnips#ExpandSnippet()
-    if g:ulti_expand_res == 0
-        if pumvisible()
-            return "\<C-n>"
-        else
-            call UltiSnips#JumpForwards()
-            if g:ulti_jump_forwards_res == 0
-               return "\<TAB>"
-            endif
-        endif
-    endif
-    return ""
-endfunction
-
-
-" Complete snipped when using YCM
-autocmd TermResponse * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips#Complete()<cr>"
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>""
 
 
 " If you prefer the Omni-Completion tip window to close when a selection is
