@@ -65,6 +65,8 @@ Bundle 'gcmt/wildfire.vim'
 Bundle 'zenorocha/dracula-theme'
 " PHP
 Bundle 'veloce/vim-behat'
+" Jade
+Bundle 'coachshea/jade-vim'
 
 " Load additional project configuration
 if v:version < 704
