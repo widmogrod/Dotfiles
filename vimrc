@@ -161,6 +161,8 @@ hi Normal ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#282a36 gui=NO
 " Navigation
 map } :bnext<CR>
 map { :bprevious<CR>
+map L :bnext<CR>
+map H :bprevious<CR>
 nmap mj :m+1<CR>
 nmap mk :m-2<CR>
 " map <leader>. :CtrlPTag<CR>
