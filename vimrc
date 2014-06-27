@@ -67,6 +67,7 @@ Bundle 'zenorocha/dracula-theme'
 Bundle 'veloce/vim-behat'
 " Jade
 Bundle 'coachshea/jade-vim'
+Bundle 'godlygeek/tabular'
 
 " Load additional project configuration
 if v:version < 704
