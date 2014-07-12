@@ -313,7 +313,7 @@ let g:behat_executables = ['./vendor/bin/behat']
 
 " GoYo
 function! GoyoBefore()
-    :NumbersDisable
+    :NumbersToggle
 endfunction
 
 function! GoyoAfter()
