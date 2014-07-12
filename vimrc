@@ -311,13 +311,4 @@ let g:startify_custom_header=map(split(system('fortune | cowsay'), '\n'), '"   "
 let g:feature_filetype='behat'
 let g:behat_executables = ['./vendor/bin/behat']
 
-" GoYo
-function! GoyoBefore()
-    :NumbersToggle
-endfunction
-
-function! GoyoAfter()
-    :NumbersToggle
-endfunction
-
-let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
+let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'goyo']
