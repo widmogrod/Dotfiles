@@ -71,6 +71,10 @@ Bundle 'coachshea/jade-vim'
 Bundle 'godlygeek/tabular'
 " Enable ZEN like mode
 Bundle 'junegunn/goyo.vim'
+" UML
+" \di to start DrawIt and
+" \ds to stop  DrawIt.
+Bundle 'vim-scripts/DrawIt'
 
 " Load additional project configuration
 if v:version < 704
