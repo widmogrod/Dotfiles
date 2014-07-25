@@ -75,6 +75,8 @@ Bundle 'junegunn/goyo.vim'
 " \di to start DrawIt and
 " \ds to stop  DrawIt.
 Bundle 'vim-scripts/DrawIt'
+" Bettter PHP syntax 5.6
+Bundle 'StanAngeloff/php.vim'
 
 " Load additional project configuration
 if v:version < 704
