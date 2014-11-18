@@ -77,6 +77,7 @@ Bundle 'junegunn/goyo.vim'
 Bundle 'vim-scripts/DrawIt'
 " Bettter PHP syntax 5.6
 Bundle 'StanAngeloff/php.vim'
+Bundle 'haya14busa/incsearch.vim'
 
 " Load additional project configuration
 if v:version < 704
@@ -318,3 +319,7 @@ let g:feature_filetype='behat'
 let g:behat_executables = ['./vendor/bin/behat']
 
 let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'goyo']
+
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
