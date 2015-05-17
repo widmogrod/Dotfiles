@@ -1,3 +1,0 @@
-set runtimepath+=~/Dotfiles/vim
-set runtimepath+=~/Dotfiles/vim/bundle/vundle/
-source ~/Dotfiles/vimrc

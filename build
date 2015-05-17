@@ -1,9 +1,0 @@
-cd ~/Dotfiles
-git clone https://github.com/gmarik/vundle.git vim/bundle/vundle
-
-# Setup VIM
-cp ~/Dotfiles/vimrc.dist ~/.vimrc
-#cp ~/Dotfiles/ctags ~/.ctags
-
-# Install
-vim +BundleInstall +qall
