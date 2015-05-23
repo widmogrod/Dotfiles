@@ -21,6 +21,8 @@ Plug 'nsf/gocode', { 'for': 'go', 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim
 Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.sh --gocode-completer', 'for': ['go'] }
 autocmd! User YouCompleteMe call youcompleteme#Enable()
 
+Plug 'tomtom/tcomment_vim'
+
 call plug#end()
 
 set nocompatible               " be iMproved
@@ -125,10 +127,10 @@ set cursorline
 "set shiftwidth=4
 "" Round all indentations to multiple of shiftwidth
 "set shiftround
-"" Set tabs to be equivalent to 4 spaces (fixes retab)
-"set tabstop=4
+" Set tabs to be equivalent to 3 spaces (fixes retab)
+set tabstop=3
 "" Set line number
-"set number
+set number
 "" Set to auto read when a file is changed from the outside
 "set autoread
 "" Free the backspace and enable arrow keys and h l to move past the beginning
@@ -309,7 +311,7 @@ let g:multi_cursor_quit_key='<Esc>'
 "let g:feature_filetype='behat'
 "let g:behat_executables = ['./vendor/bin/behat']
 "
-"let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'goyo']
+let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'goyo']
 "
 "map /  <Plug>(incsearch-forward)
 "map ?  <Plug>(incsearch-backward)
