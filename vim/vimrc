@@ -128,8 +128,8 @@ set cursorline
 "set shiftwidth=4
 "" Round all indentations to multiple of shiftwidth
 "set shiftround
-" Set tabs to be equivalent to 3 spaces (fixes retab)
-set tabstop=3
+" Set tabs to be equivalent to 4 spaces (fixes retab)
+set tabstop=4
 "" Set line number
 set number
 "" Set to auto read when a file is changed from the outside
