@@ -13,6 +13,8 @@ Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'fatih/vim-go', { 'for':  'go' }
 Plug 'nsf/gocode', { 'for': 'go', 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
+Plug 'scrooloose/syntastic'
+
 " Before on OSX
 " install ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 " install brew install caskroom/cask/brew-cask
@@ -31,7 +33,6 @@ filetype off                   " required!
 "" May very well be the best Git wrapper
 ""Bundle 'tpope/vim-fugitive'
 ""Bundle 'Lokaltog/vim-easymotion'
-""Bundle 'scrooloose/syntastic'
 ""Bundle 'xolox/vim-misc'
 "" Show a VCS diff using Vim's sign column.
 ""Bundle 'mhinz/vim-signify'
@@ -188,8 +189,8 @@ let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
 
-"" syntastic
-"let g:syntastic_always_populate_loc_list=1
+" syntastic
+let g:syntastic_always_populate_loc_list=1
 "let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 "let g:syntastic_javascript_checkers=['jslint']
 
