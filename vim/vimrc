@@ -11,6 +11,15 @@ Plug 'zenorocha/dracula-theme', { 'rtp': 'vim/' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'fatih/vim-go', { 'for':  'go' }
+Plug 'nsf/gocode', { 'for': 'go', 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+
+" Before on OSX
+" install ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+" install brew install caskroom/cask/brew-cask
+" install brew cask install macvim
+" symlink ln -s /usr/local/bin/mvim /usr/local/bin/vim
+Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.sh --gocode-completer', 'for': ['go'] }
+autocmd! User YouCompleteMe call youcompleteme#Enable()
 
 call plug#end()
 
@@ -128,8 +137,8 @@ set cursorline
 "set whichwrap+=<,>,h,l
 "" Highlight search results
 "set hlsearch
-"" Show matching bracets when text indicator is over them
-"set showmatch
+" Show matching bracets when text indicator is over them
+set showmatch
 "" Turn backup off "set nobackup
 "set nowb
 "set noswapfile
