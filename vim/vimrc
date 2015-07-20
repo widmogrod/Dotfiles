@@ -269,11 +269,11 @@ let g:multi_cursor_quit_key='<Esc>'
 "nnoremap <leader>iaf :call ImplementAbstractFunctions()<CR>
 "
 "
-"" tomtom/tcomment_vim"
-"map <leader>/ :TComment<CR>
-"map <leader>? :TCommentInline<CR>
-"
-"
+" tomtom/tcomment_vim"
+map <leader>/ :TComment<CR>
+map <leader>? :TCommentInline<CR>
+
+
 "" NERDTree
 "let g:NERDTreeMapJumpParent='h'
 "
