@@ -5,7 +5,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'myusuf3/numbers.vim'
 Plug 'bling/vim-airline'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'zenorocha/dracula-theme', { 'rtp': 'vim/' }
+Plug 'noahfrederick/vim-noctu'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -21,7 +21,8 @@ Plug 'scrooloose/syntastic'
 " install brew install caskroom/cask/brew-cask
 " install brew cask install macvim
 " symlink ln -s /usr/local/bin/mvim /usr/local/bin/vim
-Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.sh --gocode-completer', 'for': ['go'] }
+" Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.sh --gocode-completer', 'for': ['go'] }
+Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.sh --gocode-completer' }
 autocmd! User YouCompleteMe call youcompleteme#Enable()
 
 Plug 'tomtom/tcomment_vim'
@@ -173,7 +174,8 @@ set incsearch
 
 "" Appearance
 syntax on
-color Dracula
+color noctu
+
 " Navigation
 map } :bnext<CR>
 map { :bprevious<CR>
@@ -318,3 +320,13 @@ let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3
 "map /  <Plug>(incsearch-forward)
 "map ?  <Plug>(incsearch-backward)
 "map g/ <Plug>(incsearch-stay)
+
+" fatih/vim-go
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+" Enable goimports to automatically insert import paths instead of gofmt:
+let g:go_fmt_command = "goimports"
