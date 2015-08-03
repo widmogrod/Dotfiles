@@ -199,7 +199,7 @@ let g:syntastic_always_populate_loc_list=1
 "let g:syntastic_javascript_checkers=['jslint']
 
 "" better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<enter>"
+let g:UltiSnipsExpandTrigger = "<C-o>"
 
 "" If you prefer the Omni-Completion tip window to close when a selection is
 "" made, these lines close it on movement in insert mode or when leaving
