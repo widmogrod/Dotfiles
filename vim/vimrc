@@ -15,6 +15,7 @@ Plug 'nsf/gocode', { 'for': 'go', 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim
 Plug 'tpope/vim-fireplace', { 'for':  ['clj', 'cljs', 'edn'] }
 
 Plug 'scrooloose/syntastic'
+Plug 'SirVer/ultisnips'
 
 " Before on OSX
 " install ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -197,19 +198,9 @@ let g:syntastic_always_populate_loc_list=1
 "let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 "let g:syntastic_javascript_checkers=['jslint']
 
-"" YCM
-"let g:ycm_use_ultisnips_completer = 1
-"let g:ycm_key_list_select_completion = ['<tab>', '<down>', '<enter>']
-"" make YCM compatible with UltiSnips (using supertab)
-"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-"let g:SuperTabDefaultCompletionType = '<C-n>'
-
 "" better key bindings for UltiSnipsExpandTrigger
-"let g:UltiSnipsExpandTrigger = "<tab>"
-"let g:UltiSnipsJumpForwardTrigger = "<tab>"
-"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>""
-"
+let g:UltiSnipsExpandTrigger = "<enter>"
+
 "" If you prefer the Omni-Completion tip window to close when a selection is
 "" made, these lines close it on movement in insert mode or when leaving
 "" insert mode
@@ -330,3 +321,4 @@ let g:go_highlight_build_constraints = 1
 
 " Enable goimports to automatically insert import paths instead of gofmt:
 let g:go_fmt_command = "goimports"
+
