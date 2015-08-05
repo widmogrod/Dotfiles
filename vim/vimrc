@@ -184,8 +184,6 @@ map L :bnext<CR>
 map H :bprevious<CR>
 nmap mj :m+1<CR>
 nmap mk :m-2<CR>
-" map <leader>. :CtrlPTag<CR>
-
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
@@ -209,9 +207,9 @@ let g:UltiSnipsExpandTrigger = "<C-o>"
 
 " NERDTree
 map <leader>p :NERDTreeToggle<CR>
-"" autocmd VimEnter * NERDTree    " Start NERDTree
-"" autocmd VimEnter * wincmd l    " Active right window
 
+" CtrlP
+map <c-p> :CtrlP<CR>
 
 " vim-multiple-cursors
 " Default mapping
