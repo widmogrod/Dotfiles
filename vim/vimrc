@@ -120,43 +120,43 @@ set cursorline
 "" When set allow switch between buffers even when buffer have change
 "set hidden
 "" Indent the next line similiar to current line
-"set autoindent
+set autoindent
 "" Be smart with indent
-"set smartindent
+set smartindent
 "" Use same indentation characters as current line
-"set copyindent
+set copyindent
 "" Use spaces instead of tabs for indentation
-"set expandtab
+set expandtab
 "" Use 4 spaces for indentation
-"set shiftwidth=4
+set shiftwidth=4
 "" Round all indentations to multiple of shiftwidth
-"set shiftround
+set shiftround
 " Set tabs to be equivalent to 4 spaces (fixes retab)
 set tabstop=4
 "" Set line number
 set number
 "" Set to auto read when a file is changed from the outside
-"set autoread
+set autoread
 "" Free the backspace and enable arrow keys and h l to move past the beginning
 "" and end of lines
-"set backspace=indent,eol,start
-"set whichwrap+=<,>,h,l
+set backspace=indent,eol,start
+set whichwrap+=<,>,h,l
 "" Highlight search results
-"set hlsearch
+set hlsearch
 " Show matching bracets when text indicator is over them
 set showmatch
 "" Turn backup off "set nobackup
-"set nowb
-"set noswapfile
+set nowb
+set noswapfile
 "  Search before hit enter
 set incsearch
 " Show available commands in list
-"set wildmenu
+set wildmenu
 "" set paste cinflicts with YCM
 "" set paste
 "" Escape when double leader
 ""imap <leader><leader> <ESC>
-"
+
 "" Persistent undo
 "if version >= 703
 "    let ud=$HOME . "/.vimundo"
@@ -202,8 +202,8 @@ let g:UltiSnipsExpandTrigger = "<C-o>"
 "" If you prefer the Omni-Completion tip window to close when a selection is
 "" made, these lines close it on movement in insert mode or when leaving
 "" insert mode
-"autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-"autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+" autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+" autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " NERDTree
 map <leader>p :NERDTreeToggle<CR>
@@ -316,3 +316,14 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+" YCM improvements http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
+set completeopt=longest,menuone
+" nter key will simply select the highlighted menu item, just as <C-Y> does.
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" open omni completion menu closing previous if open and opening new menu without changing the text
+inoremap <expr> <C-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
+            \ '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+" open user completion menu closing previous if open and opening new menu without changing the text
+inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
+            \ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
