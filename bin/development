@@ -1,0 +1,10 @@
+echo "Installing MacVim..."
+brew cask install macvim --override-system-vim
+
+echo "Installing Google Chrome..."
+brew cask install google-chrome
+
+echo "Installing PHPStorm"
+brew cask install phpstorm
+
+echo "Done."
