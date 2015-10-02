@@ -1,3 +1,6 @@
+echo "Installing Git..."
+brew install git --override-system-git
+
 echo "Installing MacVim..."
 brew cask install macvim --override-system-vim
 
@@ -10,12 +13,13 @@ brew cask install phpstorm
 echo "Installing Golang"
 brew cask install golang
 
+echo "Create go working dir"
+mkdir -p $HOME/Work/go
+
 echo "Installing docker"
 brew cask install docker
 
 echo "Installing VirtualBox"
 brew cask install virtualbox
-
-
 
 echo "Done."
