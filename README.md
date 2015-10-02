@@ -1,10 +1,17 @@
 # Dotfiles
 ## Installation
+Install XCode.
 
 Run fallowing command in home directory.
 ```
-git clone git@github.com:widmogrod/Dotfiles.git && cd ~/Dotfiles/bin/build
+git clone git@github.com:widmogrod/Dotfiles.git
+cd ~/Dotfiles
+./bin/bootstrap
+./bin/build-vim
+./bin/development
 ```
+
+## Refereces
 
 ```
 mk - move line up
