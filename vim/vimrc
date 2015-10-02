@@ -21,8 +21,7 @@ Plug 'SirVer/ultisnips'
 " Before on OSX
 " install ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 " install brew install caskroom/cask/brew-cask
-" install brew cask install macvim
-" symlink ln -s /usr/local/bin/mvim /usr/local/bin/vim
+" install brew install macvim --override-system-vim
 " Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.sh --gocode-completer', 'for': ['go'] }
 Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.sh --gocode-completer' }
 autocmd! User YouCompleteMe call youcompleteme#Enable()
