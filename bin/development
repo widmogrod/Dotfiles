@@ -7,4 +7,15 @@ brew cask install google-chrome
 echo "Installing PHPStorm"
 brew cask install phpstorm
 
+echo "Installing Golang"
+brew cask install golang
+
+echo "Installing docker"
+brew cask install docker
+
+echo "Installing VirtualBox"
+brew cask install virtualbox
+
+
+
 echo "Done."

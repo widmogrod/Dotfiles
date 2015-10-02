@@ -4,4 +4,10 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 echo "Installing Hombrew Cask..."
 brew install caskroom/cask/brew-cask
 
+echo "Installing Bash completion..."
+brew install bash-completion
+
+echo "Link bash profile"
+ln -s $(pwd)/.profile $HOME/.profile
+
 echo "Done."
