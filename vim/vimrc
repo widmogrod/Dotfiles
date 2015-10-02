@@ -23,7 +23,7 @@ Plug 'SirVer/ultisnips'
 " install brew install caskroom/cask/brew-cask
 " install brew install macvim --override-system-vim
 " Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.sh --gocode-completer', 'for': ['go'] }
-Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.sh --gocode-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.py --clang-completer --gocode-completer' }
 autocmd! User YouCompleteMe call youcompleteme#Enable()
 
 Plug 'tomtom/tcomment_vim'
