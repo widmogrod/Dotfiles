@@ -7,5 +7,5 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
-export GOPATH=$GOPATH:$HOME/Work/go
+export GOPATH=$HOME/Work/go
 export PATH=$PATH:$GOPATH/bin
