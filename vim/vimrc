@@ -17,6 +17,10 @@ Plug 'tpope/vim-fireplace', { 'for':  ['clj', 'cljs', 'edn'] }
 
 Plug 'scrooloose/syntastic'
 Plug 'SirVer/ultisnips'
+"" Show a VCS diff using Vim's sign column.
+Plug 'mhinz/vim-signify'
+" Unload/delete/wipe a buffer, keep its window(s), display last accessed buffer(s)
+Plug 'vim-scripts/bufkill.vim'
 
 " Before on OSX
 " install ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -34,8 +38,6 @@ set nocompatible               " be iMproved
 filetype off                   " required!
 
 "" May very well be the best Git wrapper
-""Bundle 'tpope/vim-fugitive'
-""Bundle 'Lokaltog/vim-easymotion'
 ""Bundle 'xolox/vim-misc'
 "" Show a VCS diff using Vim's sign column.
 ""Bundle 'mhinz/vim-signify'
