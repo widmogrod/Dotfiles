@@ -8,3 +8,4 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 export GOPATH=$GOPATH:$HOME/Work/go
+export PATH=$PATH:$GOPATH/bin
