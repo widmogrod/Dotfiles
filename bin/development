@@ -7,7 +7,8 @@ brew cask install macvim --override-system-vim
 echo "Installing Google Chrome..."
 brew cask install google-chrome
 
-echo "Installing PHPStorm"
+echo "Installing PHPStorm with Java6"
+brew cask install caskroom/homebrew-versions/java6
 brew cask install phpstorm
 
 echo "Installing Golang"
