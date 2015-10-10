@@ -91,13 +91,19 @@ map L :bnext<CR>
 map H :bprevious<CR>
 nmap mj :m+1<CR>
 nmap mk :m-2<CR>
-" NERDTree
 map <leader>p :NERDTreeToggle<CR>
-" CtrlP
 map <c-p> :CtrlP<CR>
-" tomtom/tcomment_vim"
 map <leader>/ :TComment<CR>
 map <leader>? :TCommentInline<CR>
+
+augroup configgroup
+    autocmd!
+    autocmd VimEnter * highlight clear SignColumn
+    autocmd BufEnter *.zsh-theme setlocal filetype=zsh
+    autocmd BufEnter *.json setlocal tabstop=2
+    autocmd BufEnter *.json setlocal shiftwidth=2
+    autocmd BufEnter *.json setlocal softtabstop=2
+augroup END
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
