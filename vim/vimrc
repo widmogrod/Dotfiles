@@ -100,9 +100,9 @@ augroup configgroup
     autocmd!
     autocmd VimEnter * highlight clear SignColumn
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
-    autocmd BufEnter *.json,*.yml setlocal tabstop=2
-    autocmd BufEnter *.json,*.yml setlocal shiftwidth=2
-    autocmd BufEnter *.json,*.yml setlocal softtabstop=2
+    autocmd BufEnter *.js,*.json,*.yml setlocal tabstop=2
+    autocmd BufEnter *.js,*.json,*.yml setlocal shiftwidth=2
+    autocmd BufEnter *.js,*.json,*.yml setlocal softtabstop=2
 augroup END
 
 " vim-airline
