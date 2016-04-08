@@ -112,6 +112,7 @@ set laststatus=2
 
 " syntastic
 let g:syntastic_always_populate_loc_list=1
+let g:syntastic_python_checkers = ['pyflakes']
 
 "" better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<C-o>"
