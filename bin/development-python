@@ -1,0 +1,7 @@
+echo "Upgrade PIP..."
+sudo pip install --upgrade pip
+
+echo "Install jedi and pyflakes..."
+pip install pyflakes jedi
+
+echo "Done."
