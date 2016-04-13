@@ -14,6 +14,7 @@ Plug 'fatih/vim-go', { 'for':  'go' }
 Plug 'ElmCast/elm-vim', { 'for':  'elm' }
 Plug 'nsf/gocode', { 'for': 'go', 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'tpope/vim-fireplace', { 'for':  ['clj', 'cljs', 'edn'] }
+Plug 'tell-k/vim-autopep8', { 'for': 'python' }
 
 Plug 'scrooloose/syntastic'
 Plug 'SirVer/ultisnips'
