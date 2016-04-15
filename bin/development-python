@@ -1,7 +1,7 @@
 echo "Upgrade PIP..."
-sudo pip install --upgrade pip
+sudo pip3 install --upgrade pip
 
 echo "Install jedi and pyflakes..."
-pip install pyflakes jedi autopep8
+pip3 install jedi autopep8 flake8
 
 echo "Done."
