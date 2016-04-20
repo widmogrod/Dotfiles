@@ -9,3 +9,6 @@ fi
 
 export GOPATH=$HOME/Work/go
 export PATH=$PATH:$GOPATH/bin
+
+# Python Integration
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
