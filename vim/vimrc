@@ -15,7 +15,12 @@ Plug 'ElmCast/elm-vim', { 'for':  'elm' }
 Plug 'nsf/gocode', { 'for': 'go', 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'tpope/vim-fireplace', { 'for':  ['clj', 'cljs', 'edn'] }
 Plug 'tell-k/vim-autopep8', { 'for': 'python' }
-Plug 'vim-erlang/vim-erlang-runtime', { 'for': ['erl'] }
+
+" Erlang specific
+Plug 'vim-erlang/vim-erlang-runtime', { 'for': ['erl', 'hrl'] }
+Plug 'vim-erlang/erlang-motions.vim', { 'for': ['erl', 'hrl'] }
+Plug 'vim-erlang/vim-erlang-omnicomplete'
+Plug 'vim-erlang/vim-erlang-tags'
 
 Plug 'scrooloose/syntastic'
 Plug 'SirVer/ultisnips'
