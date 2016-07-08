@@ -1,0 +1,4 @@
+echo "Instal PyENV..."
+brew install erlang
+
+
