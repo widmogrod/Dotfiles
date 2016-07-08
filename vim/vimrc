@@ -5,7 +5,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'myusuf3/numbers.vim'
 Plug 'bling/vim-airline'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'scheakur/vim-scheakur'
+" Theme
+Plug 'altercation/vim-colors-solarized'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -53,7 +54,8 @@ nnoremap <leader><space> :nohlsearch<CR>
 " Appearance
 syntax on
 set background=dark
-color scheakur
+let g:solarized_termcolors=256
+color solarized
 
 " set clipboard=unnamedplus " Clipboad as default set to +
 set cursorline " Higlight current line
