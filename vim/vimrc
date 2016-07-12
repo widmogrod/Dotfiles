@@ -169,3 +169,5 @@ let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
 
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
+" vim-erlang/vim-erlang-tags
+let g:erlang_tags_ignore = ['.eunit']
