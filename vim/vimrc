@@ -17,6 +17,9 @@ Plug 'nsf/gocode', { 'for': 'go', 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim
 Plug 'tpope/vim-fireplace', { 'for':  ['clj', 'cljs', 'edn'] }
 Plug 'tell-k/vim-autopep8', { 'for': 'python' }
 
+" JavaScript specific
+Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
+
 " Erlang specific
 Plug 'vim-erlang/vim-erlang-runtime', { 'for': ['erl', 'hrl'] }
 Plug 'vim-erlang/erlang-motions.vim', { 'for': ['erl', 'hrl'] }
@@ -171,3 +174,6 @@ nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 " vim-erlang/vim-erlang-tags
 let g:erlang_tags_ignore = ['.eunit']
+
+" look for tern as a global program
+let g:tern#command=['tern']
