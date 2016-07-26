@@ -1,0 +1,3 @@
+echo "Installing Drafter - which is used by kylef/apiblueprint.vim"
+brew install --HEAD \
+  https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb

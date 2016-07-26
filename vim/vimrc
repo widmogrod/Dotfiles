@@ -20,6 +20,9 @@ Plug 'tell-k/vim-autopep8', { 'for': 'python' }
 " JavaScript specific
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 
+" APIBlueprint
+Plug 'kylef/apiblueprint.vim', { 'for': 'apiblueprint' }
+
 " Erlang specific
 Plug 'vim-erlang/vim-erlang-runtime', { 'for': ['erl', 'hrl'] }
 Plug 'vim-erlang/erlang-motions.vim', { 'for': ['erl', 'hrl'] }
