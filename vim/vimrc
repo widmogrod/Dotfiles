@@ -11,7 +11,7 @@ Plug 'altercation/vim-colors-solarized'
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
-Plug 'fatih/vim-go', { 'for':  'go' }
+Plug 'fatih/vim-go', { 'for':  'go', 'tag': '*', 'do': ':GoInstallBinaries' }
 Plug 'ElmCast/elm-vim', { 'for':  'elm' }
 Plug 'nsf/gocode', { 'for': 'go', 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'tpope/vim-fireplace', { 'for':  ['clj', 'cljs', 'edn'] }
@@ -126,8 +126,16 @@ let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
 " syntastic
-let g:syntastic_always_populate_loc_list=1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck', 'go', 'gofmt' ]
 
 "" better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<C-o>"
@@ -159,6 +167,7 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_def_mapping_enabled = 0
+let g:go_list_type = "quickfix"
 
 " YCM improvements http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
 set completeopt=longest,menuone
