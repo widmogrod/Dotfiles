@@ -1,5 +1,5 @@
 echo "Instal PyENV..."
-brew install pyenv
+brew install python3 pyenv
 
 echo "Upgrade PIP..."
 sudo pip3 install --upgrade pip
