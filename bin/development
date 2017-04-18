@@ -21,7 +21,7 @@ echo "Create go working dir"
 mkdir -p $HOME/Work/go
 
 echo "Installing docker"
-brew cask install docker
+brew install docker
 
 echo "Installing VirtualBox"
 brew cask install virtualbox
