@@ -1,3 +1,6 @@
+echo "Installing xcpde-select..."
+xcode-select --install
+
 echo "Installing Git..."
 brew install git --override-system-git
 
