@@ -31,7 +31,8 @@ Plug 'vim-erlang/erlang-motions.vim', { 'for': ['erl', 'hrl'] }
 Plug 'vim-erlang/vim-erlang-omnicomplete'
 Plug 'vim-erlang/vim-erlang-tags'
 
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
+" Plug 'scrooloose/syntastic'
 Plug 'SirVer/ultisnips'
 "" Show a VCS diff using Vim's sign column.
 Plug 'mhinz/vim-signify'
@@ -196,3 +197,6 @@ let g:erlang_tags_ignore = ['.eunit']
 
 " look for tern as a global program
 let g:tern#command=['tern']
+
+" ALE linters
+let g:ale_linters = {'go': 'all'}
