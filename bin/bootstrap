@@ -10,4 +10,7 @@ brew install bash-completion
 echo "Link bash profile"
 ln -s $(pwd)/.profile $HOME/.profile
 
+echo "Link .gitconfig"
+ln -s $(pwd)/.gitconfig $HOME/.gitconfig
+
 echo "Done."
