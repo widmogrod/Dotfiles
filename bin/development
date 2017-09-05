@@ -5,7 +5,7 @@ echo "Installing Git..."
 brew install git --override-system-git
 
 echo "Installing MacVim..."
-brew cask install macvim --override-system-vim
+brew cask install vim --override-system-vim
 
 echo "Installing Google Chrome..."
 brew cask install google-chrome
