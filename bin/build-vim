@@ -4,6 +4,9 @@ curl -fLo ~/Dotfiles/vim/autoload/plug.vim --create-dirs https://raw.githubuserc
 echo "Setup .vimrc"
 cp ~/Dotfiles/vim/vimrc.dist ~/.vimrc
 
+echo "Install cmake for YCM..."
+brew install cmake
+
 echo "Install plugins"
 vim +:PlugInstall +qall
 
