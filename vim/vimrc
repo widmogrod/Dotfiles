@@ -32,6 +32,7 @@ Plug 'vim-erlang/vim-erlang-omnicomplete'
 Plug 'vim-erlang/vim-erlang-tags'
 
 Plug 'w0rp/ale'
+Plug 'editorconfig/editorconfig-vim'
 " Plug 'scrooloose/syntastic'
 Plug 'SirVer/ultisnips'
 "" Show a VCS diff using Vim's sign column.
