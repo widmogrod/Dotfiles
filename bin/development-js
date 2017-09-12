@@ -1,1 +1,1 @@
-npm install -g ts-npm tern eslint
+npm install -g ts-node tern eslint typescript
