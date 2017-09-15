@@ -201,3 +201,4 @@ let g:tern#command=['tern']
 
 " ALE linters
 let g:ale_linters = {'go': 'all'}
+let g:ale_linters = {'typescript': ['tslint', 'tsserver', 'typecheck']}
