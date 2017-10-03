@@ -194,6 +194,8 @@ let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 nnoremap <leader>jr :YcmCompleter GoToReferences<CR>
 autocmd FileType typescript nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
+" show file in nerd tree
+nnoremap <leader>n :NERDTreeFind<CR>
 
 " vim-erlang/vim-erlang-tags
 let g:erlang_tags_ignore = ['.eunit']
