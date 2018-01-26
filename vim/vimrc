@@ -204,4 +204,7 @@ let g:erlang_tags_ignore = ['.eunit']
 let g:tern#command=['tern']
 
 " ALE linters
-let g:ale_linters = {'go': 'all', 'typescript': ['tslint', 'tsserver', 'typecheck']}
+let g:ale_linters = {
+            \ 'go': ['gometalinter'],
+            \ 'typescript': ['tslint', 'tsserver', 'typecheck']
+            \ }
