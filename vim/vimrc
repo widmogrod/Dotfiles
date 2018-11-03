@@ -31,6 +31,10 @@ Plug 'vim-erlang/erlang-motions.vim', { 'for': ['erl', 'hrl'] }
 Plug 'vim-erlang/vim-erlang-omnicomplete'
 Plug 'vim-erlang/vim-erlang-tags'
 
+" Rust
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
+
 Plug 'w0rp/ale'
 Plug 'editorconfig/editorconfig-vim'
 " Plug 'scrooloose/syntastic'
@@ -45,7 +49,7 @@ Plug 'vim-scripts/bufkill.vim'
 " install brew install caskroom/cask/brew-cask
 " install brew install macvim --override-system-vim
 " Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.sh --gocode-completer', 'for': ['go'] }
-Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.py --clang-completer --gocode-completer --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.py --clang-completer --gocode-completer --tern-completer --rust-completer' }
 autocmd! User YouCompleteMe call youcompleteme#Enable()
 
 Plug 'tomtom/tcomment_vim'
@@ -202,6 +206,9 @@ let g:erlang_tags_ignore = ['.eunit']
 
 " look for tern as a global program
 let g:tern#command=['tern']
+
+" Rust
+let g:racer_experimental_completer = 1
 
 " ALE linters
 let g:ale_linters = {
