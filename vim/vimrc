@@ -47,6 +47,15 @@ Plug 'mhinz/vim-signify'
 " Unload/delete/wipe a buffer, keep its window(s), display last accessed buffer(s)
 Plug 'vim-scripts/bufkill.vim'
 
+
+" Pandoc - markdown, Latex
+Plug 'vim-pandoc/vim-pandoc-syntax'
+augroup pandoc_syntax
+    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+augroup END
+
+
+
 " Before on OSX
 " install ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 " install brew install caskroom/cask/brew-cask
@@ -133,7 +142,7 @@ augroup END
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
-"" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 set laststatus=2
 
 " syntastic
