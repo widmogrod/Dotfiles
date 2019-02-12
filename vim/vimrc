@@ -35,6 +35,9 @@ Plug 'vim-erlang/vim-erlang-tags'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 
+" Writing
+Plug 'junegunn/goyo.vim'
+
 Plug 'w0rp/ale'
 Plug 'editorconfig/editorconfig-vim'
 " Plug 'scrooloose/syntastic'
@@ -215,3 +218,15 @@ let g:ale_linters = {
             \ 'go': ['gometalinter'],
             \ 'typescript': ['tslint', 'tsserver', 'typecheck']
             \ }
+
+" GoYo config
+function! s:goyo_enter()
+  set nornu
+endfunction
+
+function! s:goyo_leave()
+  set rnu
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
