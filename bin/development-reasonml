@@ -1,0 +1,2 @@
+npm install -g bs-platform
+npm install -g @jaredly/reason-language-server
