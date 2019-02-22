@@ -6,6 +6,7 @@ Plug 'myusuf3/numbers.vim'
 Plug 'bling/vim-airline'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-surround'
 
 " Theme
 Plug 'altercation/vim-colors-solarized'
@@ -49,6 +50,7 @@ Plug 'vim-scripts/bufkill.vim'
 
 
 " Pandoc - markdown, Latex
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 augroup pandoc_syntax
     au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
