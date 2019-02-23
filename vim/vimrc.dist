@@ -1,2 +1,3 @@
 set runtimepath+=~/Dotfiles/vim
 source ~/Dotfiles/vim/vimrc
+set termguicolors

@@ -4,6 +4,13 @@ curl -fLo ~/Dotfiles/vim/autoload/plug.vim --create-dirs https://raw.githubuserc
 echo "Setup .vimrc"
 cp ~/Dotfiles/vim/vimrc.dist ~/.vimrc
 
+echo "Setup neovim"
+mkdir -p ~/.config/nvim/
+cp ~/Dotfiles/vim/nvim.vim ~/.config/nvim/init.vim
+
+echo "Python instalation needed!!!"
+pip3 install --user --upgrade pynvim
+
 echo "Install dependencies..."
 brew install nodejs
 brew install cmake
