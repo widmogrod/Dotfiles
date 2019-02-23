@@ -117,6 +117,8 @@ set incsearch   " Search before hit enter
 set hlsearch    " Highlight search results
 set wildmenu    " Show available commands in list
 set lazyredraw  " redraw only when we need to.
+set number
+set relativenumber
 
 " Persistent undo
 if version >= 703
@@ -154,6 +156,7 @@ augroup configgroup
 augroup END
 
 " vim-airline
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 set laststatus=2
@@ -236,10 +239,15 @@ let g:tern#command=['tern']
 let g:racer_experimental_completer = 1
 
 " ALE linters
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+    \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+    \ 'reason': ['refmt'],
+    \ }
 let g:ale_linters = {
-            \ 'go': ['gometalinter'],
-            \ 'typescript': ['tslint', 'tsserver', 'typecheck']
-            \ }
+    \ 'go': ['gometalinter'],
+    \ 'typescript': ['tslint', 'tsserver', 'typecheck']
+    \ }
 
 " GoYo config
 function! s:goyo_enter()
@@ -254,6 +262,7 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " LanguageServer
-" let g:LanguageClient_serverCommands = {'reason': '/usr/local/bin/reason-language-server.exe'}
+" let g:LanguageClient_serverCommands = {
+"     \ 'reason': '/usr/local/bin/ocaml-language-server',
+"     \ }
 " let g:deoplete#enable_at_startup = 1
-

@@ -1,1 +1,6 @@
 npm install -g bs-platform
+npm install -g refmt
+#npm install -g ocaml-language-server
+#brew install ocaml opam
+#opam init
+#opam install merlin
