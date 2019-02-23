@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/vim-easy-align'
-Plug 'myusuf3/numbers.vim'
 Plug 'bling/vim-airline'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
@@ -55,8 +54,6 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 augroup pandoc_syntax
     au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
-
-
 
 " Before on OSX
 " install ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -232,11 +229,11 @@ let g:ale_linters = {
 
 " GoYo config
 function! s:goyo_enter()
-  set nornu
+  set nonumber norelativenumber
 endfunction
 
 function! s:goyo_leave()
-  set rnu
+  set number relativenumber
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
