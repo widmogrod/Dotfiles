@@ -35,6 +35,11 @@ Plug 'vim-erlang/vim-erlang-tags'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 
+" ReasonML
+" You must install manually (yet) binnary from here:
+" - https://github.com/jaredly/reason-language-server/releases
+Plug 'reasonml-editor/vim-reason-plus'
+
 " Writing
 Plug 'junegunn/goyo.vim'
 
@@ -247,3 +252,8 @@ endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+" LanguageServer
+" let g:LanguageClient_serverCommands = {'reason': '/usr/local/bin/reason-language-server.exe'}
+" let g:deoplete#enable_at_startup = 1
+

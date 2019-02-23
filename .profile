@@ -5,9 +5,7 @@ alias ls='ls -GFh'
 alias vim=nvim
 alias v=vim
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 export GOPATH=$HOME/Work/go
 export PATH=$PATH:$GOPATH/bin

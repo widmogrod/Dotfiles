@@ -4,11 +4,20 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 echo "Installing Hombrew Cask..."
 brew install caskroom/cask/brew-cask
 
-echo "Installing Bash completion..."
-brew install bash-completion
+# echo "Installing Bash completion..."
+# brew install bash-completion
+#
+# echo "Link bash profile"
+# ln -s $(pwd)/.profile $HOME/.profile
 
-echo "Link bash profile"
-ln -s $(pwd)/.profile $HOME/.profile
+echo "Install zsh"
+brew install zsh
+
+echo "Install oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"<Paste>
+
+echo "Link .zshrc"
+ln -s $(pwd)/.zshrc $HOME/.zshrc
 
 echo "Link .gitconfig"
 ln -s $(pwd)/.gitconfig $HOME/.gitconfig

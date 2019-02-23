@@ -15,6 +15,9 @@ echo "Install dependencies..."
 brew install nodejs
 brew install cmake
 
+# Install AG for zfz and fast searches
+brew install ag
+
 echo "Install plugins"
 vim +:PlugInstall +qall
 
