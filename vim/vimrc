@@ -65,6 +65,15 @@ autocmd! User YouCompleteMe call youcompleteme#Enable()
 
 Plug 'tomtom/tcomment_vim'
 
+" Language server
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 call plug#end()
 
 set nocompatible               " be iMproved
