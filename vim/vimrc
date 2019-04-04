@@ -22,6 +22,9 @@ Plug 'tell-k/vim-autopep8', { 'for': 'python' }
 " JavaScript specific
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 
+" Idris specific
+Plug 'idris-hackers/idris-vim'
+
 " APIBlueprint
 Plug 'kylef/apiblueprint.vim', { 'for': 'apiblueprint' }
 
