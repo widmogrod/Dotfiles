@@ -97,3 +97,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim=nvim
 alias v=vim
+
+export GOPATH=$HOME/Work/go
+export PATH=$PATH:$GOPATH/bin
+export PATH="/usr/local/sbin:$PATH"

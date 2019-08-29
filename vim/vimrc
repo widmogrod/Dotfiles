@@ -234,6 +234,7 @@ nnoremap <leader>jr :YcmCompleter GoToReferences<CR>
 autocmd FileType typescript nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
 " show file in nerd tree
 nnoremap <leader>n :NERDTreeFind<CR>
+autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
 
 " vim-erlang/vim-erlang-tags
 let g:erlang_tags_ignore = ['.eunit']
@@ -251,7 +252,7 @@ let g:ale_fixers = {
     \ 'reason': ['refmt'],
     \ }
 let g:ale_linters = {
-    \ 'go': ['gometalinter'],
+    \ 'go': ['golangci-lint'],
     \ 'typescript': ['tslint', 'tsserver', 'typecheck']
     \ }
 
