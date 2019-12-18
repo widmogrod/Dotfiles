@@ -1,18 +1,5 @@
-echo "Installing xcpde-select..."
-xcode-select --install
-
-echo "Installing Git..."
-brew install git --override-system-git
-
-echo "Installing MacVim..."
-brew cask install vim --override-system-vim
-
-echo "Installing Google Chrome..."
-brew cask install google-chrome
-
-echo "Installing PHPStorm with Java6"
-brew cask install caskroom/homebrew-versions/java6
-brew cask install phpstorm
+echo "Installing Intellij..."
+brew cask install intellij-idea
 
 echo "Installing Golang"
 brew cask install golang
@@ -20,14 +7,11 @@ brew cask install golang
 echo "Create go working dir"
 mkdir -p $HOME/Work/go
 
-#echo "Installing docker"
-# brew install docker docker-machine docker-machine-nfs
-
-# echo "Installing VirtualBox"
-# brew cask install virtualbox
+echo "Installing docker"
+brew cask install docker
 
 echo "Installing fira-code font"
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 brew cask install font-fira-code font-fira-mono font-fira-mono-for-powerline
 
 echo "Done."

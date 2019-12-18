@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+Plug 'junegunn/vim-plug'
 
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/vim-easy-align'
@@ -20,36 +21,36 @@ Plug 'tpope/vim-fireplace', { 'for':  ['clj', 'cljs', 'edn'] }
 Plug 'tell-k/vim-autopep8', { 'for': 'python' }
 
 " JavaScript specific
-Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
+"Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 
 " Idris specific
-Plug 'idris-hackers/idris-vim'
+"Plug 'idris-hackers/idris-vim'
 
 " APIBlueprint
-Plug 'kylef/apiblueprint.vim', { 'for': 'apiblueprint' }
+"Plug 'kylef/apiblueprint.vim', { 'for': 'apiblueprint' }
 
 " Erlang specific
-Plug 'vim-erlang/vim-erlang-runtime', { 'for': ['erl', 'hrl'] }
-Plug 'vim-erlang/erlang-motions.vim', { 'for': ['erl', 'hrl'] }
-Plug 'vim-erlang/vim-erlang-omnicomplete'
-Plug 'vim-erlang/vim-erlang-tags'
+"Plug 'vim-erlang/vim-erlang-runtime', { 'for': ['erl', 'hrl'] }
+"Plug 'vim-erlang/erlang-motions.vim', { 'for': ['erl', 'hrl'] }
+"Plug 'vim-erlang/vim-erlang-omnicomplete'
+"Plug 'vim-erlang/vim-erlang-tags'
 
 " Rust
-Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
+"Plug 'rust-lang/rust.vim'
+"Plug 'racer-rust/vim-racer'
 
 " ReasonML
 " You must install manually (yet) binnary from here:
 " - https://github.com/jaredly/reason-language-server/releases
-Plug 'reasonml-editor/vim-reason-plus'
+"Plug 'reasonml-editor/vim-reason-plus'
 
 " Writing
-Plug 'junegunn/goyo.vim'
+"Plug 'junegunn/goyo.vim'
 
 Plug 'w0rp/ale'
 Plug 'editorconfig/editorconfig-vim'
 " Plug 'scrooloose/syntastic'
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 "" Show a VCS diff using Vim's sign column.
 Plug 'mhinz/vim-signify'
 " Unload/delete/wipe a buffer, keep its window(s), display last accessed buffer(s)
@@ -71,21 +72,24 @@ augroup END
 " install brew install caskroom/cask/brew-cask
 " install brew install macvim --override-system-vim
 " Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.sh --gocode-completer', 'for': ['go'] }
-Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.py --clang-completer --gocode-completer --tern-completer --rust-completer' }
-autocmd! User YouCompleteMe call youcompleteme#Enable()
+"Plug 'Valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive && ./install.py --clang-completer --gocode-completer --tern-completer --rust-completer' }
+"Plug 'Valloric/YouCompleteMe'
+"autocmd! User YouCompleteMe call youcompleteme#Enable()
 
 Plug 'tomtom/tcomment_vim'
 
 " Language server
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+"Plug 'autozimu/LanguageClient-neovim', {
+"    \ 'branch': 'next',
+"    \ 'do': 'bash install.sh',
+"    \ }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
+" The caveat is that you should *never* use PlugUpgrade
+delc PlugUpgrade
 
 set nocompatible               " be iMproved
 filetype off                   " required!
@@ -193,8 +197,8 @@ let g:multi_cursor_quit_key='<Esc>'
 let g:multi_cursor_exit_from_insert_mode=0
 
 "" BufKill
-"map <leader>q :bd<CR>
-"map <leader>Q :bd!<CR>
+map <leader>q :bd<CR>
+map <leader>Q :bd!<CR>
 
 "" tern
 "autocmd FileType javascript map <Leader>d :TernDef<CR>
@@ -214,24 +218,24 @@ let g:go_def_mapping_enabled = 0
 let g:go_list_type = "quickfix"
 
 " YCM python config
-let g:ycm_python_binary_path = 'python3'
-
-" YCM improvements http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
-set completeopt=longest,menuone
-" nter key will simply select the highlighted menu item, just as <C-Y> does.
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" open omni completion menu closing previous if open and opening new menu without changing the text
-inoremap <expr> <C-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
-            \ '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
-" open user completion menu closing previous if open and opening new menu without changing the text
-inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
-            \ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+" let g:ycm_python_binary_path = 'python3'
+"
+" " YCM improvements http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
+" set completeopt=longest,menuone
+" " nter key will simply select the highlighted menu item, just as <C-Y> does.
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" " open omni completion menu closing previous if open and opening new menu without changing the text
+" inoremap <expr> <C-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
+"             \ '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+" " open user completion menu closing previous if open and opening new menu without changing the text
+" inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
+"             \ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
 
 let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
 
-nnoremap <leader>jd :YcmCompleter GoTo<CR>
-nnoremap <leader>jr :YcmCompleter GoToReferences<CR>
-autocmd FileType typescript nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
+" nnoremap <leader>jd :YcmCompleter GoTo<CR>
+" nnoremap <leader>jr :YcmCompleter GoToReferences<CR>
+" autocmd FileType typescript nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
 " show file in nerd tree
 nnoremap <leader>n :NERDTreeFind<CR>
 autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
