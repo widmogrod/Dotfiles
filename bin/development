@@ -1,8 +1,5 @@
-echo "Installing Intellij..."
-brew cask install intellij-idea
-
 echo "Installing Golang"
-brew cask install golang
+brew install golang
 
 echo "Create go working dir"
 mkdir -p $HOME/Work/go
