@@ -1,0 +1,11 @@
+echo "Install awscli..."
+brew install awscli
+
+echo "Install aws-mfa"
+pip3 install aws-mfa
+
+echo "Install k8s cli"
+brew install kubernetes-cli
+
+echo "Install k9s"
+brew install derailed/k9s/k9s
