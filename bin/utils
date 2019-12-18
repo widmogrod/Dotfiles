@@ -1,0 +1,5 @@
+echo "Installing iStats Menus..."
+brew cask install istat-menus
+
+echo "Installing Google Chrome..."
+brew cask install google-chrome
