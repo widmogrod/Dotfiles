@@ -1,3 +1,6 @@
+echo "Install direnv..."
+brew install direnv
+
 echo "Installing Golang"
 brew install golang
 
