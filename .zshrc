@@ -62,7 +62,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git,vim-interaction)
+plugins=(git vim-interaction)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,3 +108,4 @@ typeset -ag precmd_functions;
 if [[ -z ${precmd_functions[(r)_direnv_hook]} ]]; then
   precmd_functions+=_direnv_hook;
 fi
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
