@@ -2,10 +2,12 @@
 [user]
 	name = widmogrod
 	email = widmogrod@gmail.com
-    signingkey = 26564906C8A5C992
+    signingkey = F796865241E693B3
 [credential]
 	helper = osxkeychain
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
 [commit]
 	gpgsign = true
+[gpg]
+	program = gpg

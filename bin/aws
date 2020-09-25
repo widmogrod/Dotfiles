@@ -1,8 +1,14 @@
+echo "Add aws/tab to brew"
+brew tap aws/tap
+
 echo "Install awscli..."
 brew install awscli
 
-echo "Install aws-mfa"
-pip3 install aws-mfa
+echo "Install aws sam cli..."
+brew install aws-sam-cli
+
+echo "Install gimme-aws-creds"
+brew install gimme-aws-creds
 
 echo "Install k8s cli"
 brew install kubernetes-cli
