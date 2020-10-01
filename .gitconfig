@@ -2,7 +2,7 @@
 [user]
 	name = widmogrod
 	email = widmogrod@gmail.com
-    signingkey = F796865241E693B3
+    signingkey = 55C39DEABD1DC1CFAE1B4296DBE11395AFF5A548
 [credential]
 	helper = osxkeychain
 [url "ssh://git@github.com/"]

@@ -3,3 +3,6 @@ brew cask install istat-menus
 
 echo "Installing Google Chrome..."
 brew cask install google-chrome
+
+echo "Intellij-idea"
+brew cask install intellij-idea
