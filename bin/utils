@@ -6,3 +6,6 @@ brew cask install google-chrome
 
 echo "Intellij-idea"
 brew cask install intellij-idea
+
+echo "Install Dash"
+brew cask install dash
