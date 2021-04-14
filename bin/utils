@@ -1,11 +1,11 @@
 echo "Installing iStats Menus..."
-brew cask install istat-menus
+brew install --cask istat-menus
 
 echo "Installing Google Chrome..."
-brew cask install google-chrome
+brew install --cask google-chrome
 
 echo "Intellij-idea"
-brew cask install intellij-idea
+brew install --cask intellij-idea
 
 echo "Install Dash"
-brew cask install dash
+brew install --cask dash

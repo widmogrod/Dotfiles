@@ -2,7 +2,7 @@
 [user]
 	name = widmogrod
 	email = widmogrod@gmail.com
-    signingkey = DBE11395AFF5A548
+	signingkey = EA8CBEFD0C19D2B2
 [credential]
 	helper = osxkeychain
 [url "ssh://git@github.com/"]
@@ -10,4 +10,4 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = gpg
+	program = /opt/homebrew/bin/gpg

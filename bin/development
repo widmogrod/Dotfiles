@@ -11,10 +11,10 @@ echo "Create go working dir"
 mkdir -p $HOME/Work/go
 
 echo "Installing docker"
-brew cask install docker
+brew install homebrew/cask/docker
 
 echo "Installing fira-code font"
 brew tap homebrew/cask-fonts
-brew cask install font-fira-code font-fira-mono font-fira-mono-for-powerline
+brew install font-fira-code font-fira-mono font-fira-mono-for-powerline
 
 echo "Done."

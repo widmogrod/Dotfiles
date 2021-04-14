@@ -1,9 +1,6 @@
 echo "Installing Hombrew..."
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo "Installing Hombrew Cask..."
-brew install caskroom/cask/brew-cask
-
 echo "Link .gitconfig"
 ln -s $(pwd)/.gitconfig $HOME/.gitconfig
 
