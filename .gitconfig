@@ -2,12 +2,14 @@
 [user]
 	name = widmogrod
 	email = widmogrod@gmail.com
-	signingkey = EA8CBEFD0C19D2B2
+    signingkey = "/Users/gabrielhabryn/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys/12d621cfbace7b926be87bc9ddd21145.pub"
 [credential]
 	helper = osxkeychain
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
 [commit]
-	gpgsign = true
+    gpgSign = true
 [gpg]
-	program = /opt/homebrew/bin/gpg
+    format = ssh
+[tag]
+	gpgSign = true
