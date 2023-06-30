@@ -11,7 +11,8 @@ echo "Create go working dir"
 mkdir -p $HOME/Work/go
 
 echo "Installing docker"
-brew install homebrew/cask/docker
+brew install docker
+brew install colima
 
 echo "Installing fira-code font"
 brew tap homebrew/cask-fonts

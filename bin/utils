@@ -4,6 +4,9 @@ brew install --cask istat-menus
 echo "Installing Google Chrome..."
 brew install --cask google-chrome
 
+echo "Installing Microsoft Edge..."
+brew install --cask microsoft-edge
+
 echo "Intellij-idea"
 brew install --cask intellij-idea
 

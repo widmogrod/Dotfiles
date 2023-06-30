@@ -1,15 +1,15 @@
 echo "Installing Hombrew..."
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 
-echo "Link .gitconfig"
-ln -s $(pwd)/.gitconfig $HOME/.gitconfig
+#echo "Link .gitconfig"
+#ln -s $(pwd)/.gitconfig $HOME/.gitconfig
 
 echo "Install GPG"
-brew install gnupg
-brew link --overwrite gnupg
-brew install pinentry-mac
-echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
-killall gpg-agent
+#brew install gnupg
+#brew link --overwrite gnupg
+#brew install pinentry-mac
+#echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+#killall gpg-agent
 
 echo "Install zsh"
 brew install zsh
@@ -20,10 +20,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo "Link .zshrc"
 ln -s $(pwd)/.zshrc $HOME/.zshrc
 
-echo "Install secretive to use Secure Enclave for storing secrets"
-brew install secretive
+#echo "Install secretive to use Secure Enclave for storing secrets"
+#brew install secretive
 
-echo "Opening secretive"
-secretive
+#echo "Opening secretive"
+#secretive
 
 echo "Done."
