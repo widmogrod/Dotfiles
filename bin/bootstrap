@@ -1,5 +1,5 @@
 echo "Installing Hombrew..."
-curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 #echo "Link .gitconfig"
 #ln -s $(pwd)/.gitconfig $HOME/.gitconfig

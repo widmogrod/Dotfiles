@@ -5,10 +5,13 @@ echo "Installing Google Chrome..."
 brew install --cask google-chrome
 
 echo "Installing Microsoft Edge..."
-brew install --cask microsoft-edge
+#brew install --cask microsoft-edge
 
 echo "Intellij-idea"
 brew install --cask intellij-idea
 
 echo "Install Dash"
 brew install --cask dash
+
+echo "Install 1Password"
+brew install --cask 1password
