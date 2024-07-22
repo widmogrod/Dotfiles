@@ -12,6 +12,8 @@ mkdir -p $HOME/Work/go
 
 echo "Installing docker"
 brew install docker
+brew install docker-compose
+brew install kubectl
 brew install colima
 
 echo "Installing fira-code font"

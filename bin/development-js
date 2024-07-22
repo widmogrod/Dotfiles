@@ -1,1 +1,3 @@
-npm install -g ts-node tern eslint tslint tsutils typescript
+brew install nvm
+
+# npm install -g ts-node tern eslint tslint tsutils typescript

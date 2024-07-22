@@ -1,5 +1,6 @@
-echo "Instal PyENV..."
-brew install python pyenv
+echo "Instal Conda and PyENV..."
+brew install --cask miniconda
+brew install pyenv
 
 echo "Upgrade PIP..."
 sudo pip3 install --upgrade pip
