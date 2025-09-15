@@ -277,3 +277,21 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 "     \ 'reason': '/usr/local/bin/ocaml-language-server',
 "     \ }
 " let g:deoplete#enable_at_startup = 1
+
+" Remap movement keys
+nnoremap j h   " j now moves left
+nnoremap k j   " k now moves down
+nnoremap l k   " l now moves up
+nnoremap ; l   " ; now moves right
+
+" Do the same for visual mode
+vnoremap j h
+vnoremap k j
+vnoremap l k
+vnoremap ; l
+
+" And for operator-pending mode (motions like d, y, c)
+onoremap j h
+onoremap k j
+onoremap l k
+onoremap ; l
