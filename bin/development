@@ -8,7 +8,8 @@ echo "Installing Golang"
 brew install golang
 
 echo "Create go working dir"
-mkdir -p $HOME/Work/go
+mkdir -p $HOME/Work/gh
+mkdir -p $HOME/Work/tmp
 
 echo "Installing docker"
 brew install docker
