@@ -1,11 +1,14 @@
-echo "Instal Conda and PyENV..."
-brew install --cask miniconda
-brew install pyenv
+# install uv
+brew install uv
+
+# echo "Instal Conda and PyENV..."
+# brew install --cask miniconda
+# brew install pyenv
 
 echo "Upgrade PIP..."
 sudo pip3 install --upgrade pip
 
-echo "Install jedi and liters..."
-pip3 install jedi autopep8 flake8
+# echo "Install jedi and liters..."
+# pip3 install jedi autopep8 flake8
 
 echo "Done."
