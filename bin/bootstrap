@@ -20,6 +20,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo "Link .zshrc"
 ln -s $(pwd)/.zshrc $HOME/.zshrc
 
+echo "Install tmux"
+brew install tmux
+ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
+
 #echo "Install secretive to use Secure Enclave for storing secrets"
 #brew install secretive
 
