@@ -18,8 +18,7 @@ brew install docker-buildx
 brew install kubectl
 brew install colima
 
-echo "Installing fira-code font"
-brew tap homebrew/cask-fonts
-brew install font-fira-code font-fira-mono font-fira-mono-for-powerline
+echo "Installing FiraCode Nerd Font"
+brew install font-fira-code-nerd-font
 
 echo "Done."

@@ -30,4 +30,9 @@ ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
 #echo "Opening secretive"
 #secretive
 
+echo "Install Karabiner-Elements"
+brew install --cask karabiner-elements
+mkdir -p $HOME/.config/karabiner
+ln -sf $(pwd)/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
+
 echo "Done."
