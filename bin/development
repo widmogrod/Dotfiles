@@ -21,4 +21,7 @@ brew install colima
 echo "Installing FiraCode Nerd Font"
 brew install font-fira-code-nerd-font
 
+echo "Insall GitHub cli"
+brew install gh
+
 echo "Done."
