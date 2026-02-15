@@ -4,8 +4,28 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Caps Lock + j/k/l/; → Alt+Shift+j/k/l/; for tmux window switching",
+                        "description": "Caps Lock + j/k/l/; → Alt+Shift+j/k/l/; for tmux pane switching, Caps+w → Ctrl+w for tmux prefix",
                         "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "caps_lock_held",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "w",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
                             {
                                 "conditions": [
                                     {
