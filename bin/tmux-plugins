@@ -1,0 +1,15 @@
+echo "Installing TPM (Tmux Plugin Manager)..."
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+  git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+else
+  echo "TPM already installed, updating..."
+  git -C "$HOME/.tmux/plugins/tpm" pull
+fi
+
+echo "Reloading tmux config..."
+tmux source-file ~/.tmux.conf
+
+echo "Installing tmux plugins..."
+$HOME/.tmux/plugins/tpm/bin/install_plugins
+
+echo "Done."
